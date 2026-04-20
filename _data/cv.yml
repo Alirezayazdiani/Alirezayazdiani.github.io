@@ -1,189 +1,243 @@
 cv:
-  name: Albert Einstein
-  label: Scientist
-  email: einstein@example.com
-  location: Princeton, NJ
+  name: Alireza Yazdiani
+  label: Ph.D. Candidate in Transportation Engineering
+  email: ay373@cornell.edu
+  phone: "+16073391630"
+  location: Ithaca, NY, USA
   image: ""
-  summary: A German-born theoretical physicist, widely ranked among the greatest and most influential scientists of all time
+  summary: Ph.D. candidate in Transportation Engineering at Cornell University with experience in transportation data science, machine learning, and optimization for public-sector decision-making. Develops Python-based analytical pipelines, predictive and statistical models, and MILP/MINLP optimization frameworks for large-scale mobility, logistics, and environmental planning problems.
 
   social_networks:
-    - network: X
-      username: AlbertEinstein
-    - network: GitHub
-      username: example
     - network: LinkedIn
-      username: example
+      username: alireza-yazdiani-7468b075
+    - network: GitHub
+      username: Alirezayazdiani
 
   address:
-    street: 2712 Broadway St
-    city: San Francisco
-    region: California
-    postalCode: CA 94115
+    city: Ithaca
+    region: New York
     countryCode: US
 
   sections:
     Education:
-      - institution: University of Zurich
-        location: Zurich, Switzerland
-        url: https://www.uzh.ch/
-        area: Physics
-        studyType: PhD
-        start_date: 1900
-        end_date: 1905
-        score: ""
-        courses: "Theory of Relativity"
+      - institution: Cornell University
+        location: Ithaca, NY, USA
+        url: https://www.cornell.edu/
+        area: Transportation Engineering
+        studyType: Ph.D.
+        start_date: 2023-08-01
+        end_date: present
+        score: "4.03/4.3"
         highlights:
-          - Description 1.
-          - Description 2.
+          - "Advisor: Prof. Oliver Gao"
+          - "Research: Transportation data science, machine learning, optimization"
 
-      - institution: Eidgenössische Technische Hochschule
-        location: Zurich, Switzerland
-        area: Physics
-        studyType: Federal teaching diploma
-        start_date: 1896
-        end_date: 1900
+      - institution: Sharif University of Technology (SUT)
+        location: Tehran, Iran
+        area: Transportation Engineering
+        studyType: M.Sc.
+        start_date: 2020-09-01
+        end_date: 2023-07-01
+        score: "4.0/4.0 (18.28/20)"
         highlights:
-          - Description 1.
-          - Description 2.
+          - "Ranked 1st among all M.Sc. students in Transportation Engineering"
+          - "Advisor: Prof. Yousef Shafahi"
+
+      - institution: University of Tehran (UT)
+        location: Tehran, Iran
+        area: Civil Engineering
+        studyType: B.Sc.
+        start_date: 2015-09-01
+        end_date: 2020-01-01
+        score: "3.61/4.0 (16.9/20)"
+        highlights:
+          - "Ranked within the top 20% of graduating students"
 
     Experience:
-      - company: Institute for Advanced Study, Princeton University
-        position: Professor of Theoretical Physics
-        location: Princeton University, NJ
-        start_date: 1933
-        end_date: 1955
-        summary: Teaching at Palmer Physical Laboratory (now 302 Frist Campus Center). While not a professor at Princeton, I associated with the physics professors and continued to give lectures on campus.
+      - company: Cornell University
+        position: Graduate Research Assistant
+        location: Ithaca, NY, USA
+        start_date: 2023-08-01
+        end_date: present
+        summary: Civil and Environmental Engineering Department
         highlights:
-          - Relativity
-          - Description 2.
+          - "Spatiotemporal machine learning for PM2.5 hotspot analysis (93% accuracy with XGBoost)"
+          - "MILP/MINLP optimization for hydrogen refueling station siting and urban air mobility scheduling"
+          - "ETL pipelines and cloud-based analytics for NYC transportation and emissions modeling"
 
-      - company: California Institute of Technology
-        position: Visiting Professor
-        location: Pasadena, California, US
-        start_date: 1933
-        end_date: 1933
+      - company: Cornell University
+        position: Teaching Assistant
+        location: Ithaca, NY, USA
+        start_date: 2023-08-01
+        end_date: present
+        summary: Graduate Courses, Civil and Environmental Engineering
         highlights:
-          - Description 1.
-          - Description 2.
+          - "Six Sigma Design for Reliable Systems, Systems Architecture, Project Management, Economics and Finance"
 
-      - company: Kaiser Wilhelm Institute for Physics
-        position: Director
-        location: Berlin, Germany
-        start_date: 1917
-        end_date: 1933
-
-      - company: Karl-Ferdinand University
-        position: Professor of Theoretical Physics
-        location: Prague, Czechoslovakia
-        start_date: 1911
-        end_date: 1917
-
-      - company: University of Zurich
-        position: Associate Professor of Theoretical Physics
-        location: Zurich, Switzerland
-        start_date: 1909
-        end_date: 1911
-
-    Volunteer:
-      - company: People's Climate March
-        position: Lead Organizer
-        location: Zurich, Switzerland
-        start_date: 2014-04-01
-        end_date: 2015-07-01
-        summary: Lead organizer for the New York City branch of the People's Climate March, the largest climate march in history.
+      - company: Sharif University of Technology
+        position: Teaching Assistant
+        location: Tehran, Iran
+        start_date: 2020-09-01
+        end_date: 2023-06-01
+        summary: Graduate Courses, Department of Civil Engineering
         highlights:
-          - "Awarded 'Climate Hero' award by Greenpeace for my efforts organizing the march."
-          - "Men of the year 2014 by Time magazine"
+          - "Operation Research, Transportation System Analysis, Simulation"
+
+      - company: University of Tehran
+        position: Teaching Assistant
+        location: Tehran, Iran
+        start_date: 2018-03-01
+        end_date: 2020-01-01
+        summary: Undergraduate Courses, Department of Civil Engineering
+        highlights:
+          - "Statics"
 
     Awards:
-      - title: Nobel Prize in Physics
+      - title: Student Presentation Competition Certificate
         authors:
-          - "Royal Swedish Academy of Sciences"
-        date: 1921-11-01
-        awarder: Royal Swedish Academy of Sciences
-        url: https://www.nobelprize.org/prizes/physics/1921/einstein/biographical/
-        summary: The Nobel Prizes are five separate prizes that, according to Alfred Nobel's will of 1895, are awarded to 'those who, during the preceding year, have conferred the greatest benefit to humankind.'
+          - "Association of Metropolitan Planning Organizations (AMPO)"
+        date: 2025-01-01
+        awarder: Association of Metropolitan Planning Organizations (AMPO)
+        summary: Awarded for outstanding student presentation at AMPO annual conference.
 
-      - title: Max Planck Medal
+      - title: Ranked 1st Among All M.Sc. Students
         authors:
-          - "German Physical Society"
-        date: 2029
-        awarder: German Physical Society
-        summary: Awarded for outstanding scientific achievement
+          - "Sharif University of Technology"
+        date: 2023-07-01
+        awarder: Sharif University of Technology
+        summary: Ranked 1st among all M.Sc. students in Transportation Engineering.
+
+      - title: Ranked 3rd in National Entrance Exam for M.Sc.
+        authors:
+          - "Iran's Ministry of Science"
+        date: 2020-01-01
+        awarder: Iran's National Universities' Entrance Exam
+        summary: Ranked 3rd among more than 16,000 students.
+
+      - title: University of Tehran Fellowship for M.Sc.
+        authors:
+          - "University of Tehran"
+        date: 2020-01-01
+        awarder: University of Tehran
+        summary: Awarded fellowship (not attended).
+
+      - title: Ranked 645th in National Entrance Exam for B.Sc.
+        authors:
+          - "Iran's Ministry of Science"
+        date: 2015-01-01
+        awarder: Iran's National Universities' Entrance Exam
+        summary: Ranked 645th among more than 200,000 students.
 
     Publications:
-      - title: Zur Elektrodynamik bewegter Körper
+      - title: "Integrated Optimization of Hydrogen Refueling Stations with Green and Blue Hydrogen Production for Freight Corridors"
         authors:
-          - Albert Einstein
-        publisher: Annalen der Physik
-        releaseDate: 1905-06-30
-        url: https://en.wikisource.org/wiki/Translation:On_the_Electrodynamics_of_Moving_Bodies
-        summary: It concerned an interpretation of the Michelson–Morley experiment and the properties of light and time. Special relativity incorporates the principle that the speed of light is the same for all inertial observers regardless of the state of motion of the source.
+          - Y. G. Park
+          - A. Yazdiani
+          - R. Zhu
+          - J. Xiao
+          - P. You
+          - X. Cheng
+          - C. Sy
+          - H. O. Gao
+        publisher: Journal of Cleaner Production
+        releaseDate: 2026-01-01
+        url: https://doi.org/10.1016/j.jclepro.2026.148148
 
-      - title: Über einen die Erzeugung und Verwandlung des Lichtes betreffenden heuristischen Gesichtspunkt
+      - title: "An optimization framework for the time-dependent electric vehicle routing problem with shared mobility: a step toward smart cities"
         authors:
-          - Albert Einstein
-        publisher: Annalen der Physik
-        releaseDate: 1905-03-18
-        url: https://de.wikisource.org/wiki/Über_einen_die_Erzeugung_und_Verwandlung_des_Lichtes_betreffenden_heuristischen_Gesichtspunkt
-        summary: In the second paper, he applied the quantum theory to light to explain the photoelectric effect. In particular, he used the idea of light quanta (photons) to explain experimental results, but stressed the importance of the experimental results. The importance of his work on the photoelectric effect earned him the Nobel Prize in Physics in 1921.
+          - A. Yazdiani
+          - S. Bafandkar
+          - Y. Shafahi
+          - A. Elmi
+        publisher: Digital Engineering
+        releaseDate: 2026-01-01
+        url: https://doi.org/10.1016/j.dte.2026.100095
 
-      - title: Die Grundlage der allgemeinen Relativitätstheorie
+      - title: "Machine learning in spatiotemporal PM2.5 hotspots analysis for better targeted mitigation strategies"
         authors:
-          - Albert Einstein
-        publisher: Annalen der Physik
-        releaseDate: 1916-03-20
-        url: https://de.wikisource.org/wiki/Die_Grundlage_der_allgemeinen_Relativitätstheorie
-        summary: The publication of the theory of general relativity made him internationally famous. He was professor of physics at the universities of Zurich (1909–1911) and Prague (1911–1912), before he returned to ETH Zurich (1912–1914).
+          - D. Lu
+          - A. Yazdiani
+          - T. Fraser
+          - M. Tayarani
+          - H. O. Gao
+        publisher: Transportation Research Part D
+        releaseDate: 2025-01-01
+        url: https://www.sciencedirect.com/science/article/pii/S1361920925004274
+
+      - title: "Digitalizing railway operations: An optimization-based train rescheduling model for urban and interurban disrupted networks"
+        authors:
+          - S. Bafandkar
+          - Y. Shafahi
+          - A. Eslami
+          - A. Yazdiani
+        publisher: Digital Engineering
+        releaseDate: 2025-01-01
+        url: https://doi.org/10.1016/j.dte.2024.100033
+
+      - title: "AI-Driven Adaptive Air Transit with Modular Aerial Pods"
+        authors:
+          - A. Shafiee
+          - A. Yazdiani
+          - H. Rastegar
+          - R. Li
+          - R. Karim
+          - A. Cao
+          - Z. Li
+          - X. Yu
+          - C. Sy
+          - Z. Bao
+          - X. Cheng
+          - O. Gao
+        publisher: Computer Science Procedia
+        releaseDate: 2025-01-01
+        url: https://doi.org/10.1016/j.procs.2025.08.206
 
     Skills:
-      - name: Physics
-        level: Master
-        icon: fa-solid fa-hashtag
-        keywords: "Quantum Mechanics, Quantum Computing, Quantum Information, Quantum Cryptography, Quantum Communication, Quantum Teleportation"
+      - name: Programming Languages
+        level: Expert
+        icon: fa-solid fa-code
+        keywords: "Python, R, SQL"
+
+      - name: Data Science & Machine Learning
+        level: Expert
+        icon: fa-solid fa-brain
+        keywords: "pandas, NumPy, scikit-learn, XGBoost, feature engineering, predictive modeling"
+
+      - name: Optimization
+        level: Expert
+        icon: fa-solid fa-chart-line
+        keywords: "MILP, MINLP, Gurobi, CPLEX, transportation modeling, network optimization"
+
+      - name: Data Engineering & Tools
+        level: Proficient
+        icon: fa-solid fa-database
+        keywords: "ETL pipelines, Git, AWS, Docker"
 
     Languages:
-      - name: German
+      - name: Persian
         summary: "Native speaker"
 
       - name: English
-        summary: "Fluent"
+        summary: "Fluent (TOEFL iBT: 101)"
 
     Interests:
-      - name: Physics
-        icon: fa-solid fa-tag
-        keywords: "Quantum Mechanics, Quantum Computing, Quantum Information, Quantum Cryptography, Quantum Communication, Quantum Teleportation"
+      - name: Transportation Data Science
+        icon: fa-solid fa-car
+        keywords: "Intelligent Transportation Systems, Agent-based Modeling, Optimization, Data Analytics, Machine Learning"
 
-    Certificates:
-      - name: Machine Learning
-        date: 2018-01-01
-        issuer: Stanford University
-        icon: fa-solid fa-location-dot
-
-      - name: Quantum Computing
-        date: 2018-01-01
-        issuer: Stanford University
-        icon: fa-solid fa-tag
-
-      - name: Quantum Information
-        date: 2018-01-01
-        issuer: Stanford University
-        icon: fa-solid fa-envelope
-
-    Projects:
-      - name: Quantum Computing
-        summary: Quantum computing is the use of quantum-mechanical phenomena such as superposition and entanglement to perform computation. Computers that perform quantum computations are known as quantum computers.
-        highlights:
-          - Quantum Teleportation
-          - Quantum Cryptography
-        start_date: 2018-01-01
-        end_date: 2018-01-01
+      - name: Sustainable Mobility
+        icon: fa-solid fa-leaf
+        keywords: "Electric Vehicles, Hydrogen Infrastructure, Air Quality, Environmental Justice, Emissions Modeling"
 
     References:
-      - name: Professor John Doe
-        icon: fa-solid fa-laptop
-        reference: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam condimentum, diam quis convallis euismod, arcu mi ullamcorper lorem, a vestibulum nunc magna at sem. Sed in risus ac felis varius blandit.
+      - name: Prof. Oliver Gao
+        icon: fa-solid fa-user-tie
+        reference: "Howard Simpson Professor, Department of Civil Engineering, Cornell University. Email: hg55@cornell.edu"
 
-      - name: Professor Jane Smith
-        icon: fa-solid fa-thumbtack
-        reference: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam condimentum, diam quis convallis euismod, arcu mi ullamcorper lorem, a vestibulum nunc magna at sem. Sed in risus ac felis varius blandit.
+      - name: Prof. Tim Fraser
+        icon: fa-solid fa-user-tie
+        reference: "Research Associate, Systems Engineering Program, Cornell Tech. Email: tmf77@cornell.edu"
+
+      - name: Prof. Robert Todd Newman
+        icon: fa-solid fa-user-tie
+        reference: "Senior Lecturer, Department of Civil Engineering, Cornell University. Email: rtn24@cornell.edu"

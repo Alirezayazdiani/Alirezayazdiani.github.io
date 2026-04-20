@@ -1,0 +1,722 @@
+%------------------------------------------------------------------------------
+% CV in Latex
+% Author : Charles Rambo
+% Based off of: https://github.com/sb2nov/resume and Jake's Resume on Overleaf
+% Most recently updated version may be found at https://github.com/fizixmastr 
+% License : MIT
+%------------------------------------------------------------------------------
+
+\documentclass[A4,11pt]{article}
+%\documentclass[letterpaper,11pt]{article} %For use in US
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\usepackage{tikz}
+\input{glyphtounicode}
+\usepackage{fontawesome5}   % For LinkedIn, GitHub, Email, Phone, etc.
+\usepackage{academicons}    % For Google Scholar and academic-related icons
+\usepackage{xcolor} 
+\usepackage{fontawesome5}   % For LinkedIn, GitHub, Email, etc.
+\usepackage{academicons}    % For Google Scholar and other academic icons
+\usepackage{xcolor}         % For custom icon colors
+\usepackage{hyperref}       % For clickable links
+\usepackage{ragged2e}
+\usepackage{lmodern} % Modern Computer Latin
+\renewcommand{\bfdefault}{b} % Make bold text heavier
+
+%-----FONT OPTIONS-------------------------------------------------------------
+\begin{comment}
+The font of the document will impact not just how readable it is, but how it is
+perceived. In the "The Craft of Scientific Writing" by Michael Alley, shares a
+common fonts for publication as well as their use. I have chosen to use
+Palatino for its legibility, some others are given below. There is far too much
+about typography to discus here. Note: serif fonts have short projecting
+strokes, sans-serif fonts are sans (without) these strokes.
+\end{comment}
+
+
+% serif
+\usepackage{palatino}
+% \usepackage{times} %This is the default as well
+% \usepackage{charter}
+ % \usepackage[sfdefault]{sourcesanspro} % Modern and clean
+
+ 
+% sans-serif
+ % \usepackage{helvet}
+ % \usepackage[sfdefault]{noto-sans}
+ % \usepackage[default]{sourcesanspro}
+
+%-----PAGE SETUP---------------------------------------------------------------
+\renewcommand{\bfdefault}{b}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-1cm}
+\addtolength{\evensidemargin}{-1cm}
+\addtolength{\textwidth}{2cm}
+\addtolength{\topmargin}{-1cm}
+\addtolength{\textheight}{2cm}
+
+% Margins for US Letter size
+%\addtolength{\oddsidemargin}{-0.5in}
+%\addtolength{\evensidemargin}{-0.5in}
+%\addtolength{\textwidth}{1in}
+%\addtolength{\topmargin}{-.5in}
+%\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0cm}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+% Ensure that .pdf is machine readable/ATS parsable
+\pdfgentounicode=1
+
+%-----CUSTOM COMMANDS FOR FORMATTING SECTIONS----------------------------------
+\newcommand{\CVItem}[1]{
+  \item\small{
+    {#1 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\CVSubheading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \small#3 & \small #4 \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\CVSubSubheading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \text{\small#1} & \text{\small #2} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\CVSubItem}[1]{\CVItem{#1}\vspace{-4pt}}
+
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\CVSubHeadingListStart}{\begin{itemize}[leftmargin=0.5cm, label={}]}
+% \newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]} % Uncomment for US
+\newcommand{\CVSubHeadingListEnd}{\end{itemize}}
+\newcommand{\CVItemListStart}{\begin{itemize}}
+\newcommand{\CVItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+
+
+%------------------------------------------------------------------------------
+% CV STARTS HERE  %
+%------------------------------------------------------------------------------
+\begin{document}
+
+%-----HEADING------------------------------------------------------------------
+\begin{center}
+
+%--- Name ---
+{\fontsize{28}{36}\selectfont
+\scshape{Alireza} \textbf{Yazdiani}
+}\\[4pt]
+
+%--- Roles/Tags ---
+\textcolor{blue!70}{
+       Transportation Data Science  \quad $\cdot$ \quad  Machine Learning \quad $\cdot$ Optimization
+}\\[6pt]
+
+%--- Location ---
+\small \textit{Ithaca, NY, USA}\\[6pt]
+
+%--- Contact Information ---
+\small \faPhone \hspace{2pt} \href{tel:+16073391630}{+1 (607) 339 1630} \hspace{4pt} \vline \hspace{4pt}
+\faEnvelope \hspace{2pt} \href{mailto:ay373@cornell.edu}{ay373@cornell.edu} \hspace{4pt} \vline \hspace{4pt}
+\faLinkedin \hspace{2pt} \href{https://linkedin.com/in/alireza-yazdiani-7468b075}{alireza-yazdiani}
+\hspace{4pt} \vline \hspace{4pt}
+\textcolor[HTML]{4285F4}{\aiGoogleScholar} \hspace{2pt} 
+\href{https://scholar.google.com/citations?user=yAJENG4AAAAJ&hl=en}{Alireza Yazdiani}
+\end{center}
+
+%-----EDUCATION----------------------------------------------------------------
+\section{Summary}
+  \CVSubHeadingListStart
+% \small Ph.D. student in Transportation Systems at Cornell University with hands-on experience in \textbf{optimization modeling}, \textbf{simulation}, and \textbf{data-driven analytics}. Skilled in applying \textbf{mathematical programming} (Gurobi, CPLEX), \textbf{machine learning}, and cloud-based platforms to solve complex challenges in transportation, logistics, and supply chains. Passionate about leveraging advanced analytics and scalable computational tools to drive \textbf{operational efficiency}, sustainability, and informed decision-making in real-world systems.  \CVSubHeadingListEnd
+\small
+\justifying
+
+% Ph.D. student in Transportation Engineering (Cornell University) applying \textbf{operations research} and \textbf{machine learning} to large-scale  transportation, and supply-chain problems. Build \textbf{scalable optimization models} (MILP with Gurobi/CPLEX), \textbf{time-series} and \textbf{causal inference} pipelines, and simulation (AnyLogic) to \textbf{prototype}, \textbf{experiment}, and drive measurable operational impact. Experienced with \textbf{algorithms \& data structures}, and Docker collaboration to translate research into production-ready tools.
+% Ph.D. student in Transportation Engineering at Cornell University applying operations research, simulation, and machine learning to solve large-scale transportation and airline network problems. Experienced in building scalable optimization models (MILP, MINLP) using Gurobi/CPLEX, developing simulation frameworks (AnyLogic), and integrating data-driven decision support pipelines for real-time operational improvements. Proficient in Python, SQL, and containerized cloud workflows to deliver production-ready tools that improve efficiency and reliability.
+% Ph.D. student in Transportation Engineering at Cornell University with expertise in operations research, optimization, and data-driven decision-making. Skilled in developing scalable models and simulation frameworks to improve  network efficiency and performance. Proficient in Python, SQL, and commercial solvers (Gurobi, CPLEX) with experience in cloud-based deployment and real-time decision support.
+% Ph.D. student in Transportation Engineering at Cornell University with expertise in data science, predictive analytics, and optimization. Experienced in using machine learning and statistical modeling to drive insights and decision-making. Proficient in Python, SQL, and Tableau, with a strong record of developing scalable, cloud-based data solutions.
+
+
+Ph.D. candidate in Transportation Engineering at Cornell University with experience in \textbf{transportation data science}, \textbf{machine learning}, and \textbf{optimization} for public-sector decision-making. I develop \textbf{Python}-based analytical pipelines, \textbf{predictive and statistical models}, and \textbf{MILP/MINLP} optimization frameworks for large-scale mobility, logistics, and environmental planning problems. My work focuses on integrating complex transportation datasets into decision-support tools for \textbf{policy evaluation}, \textbf{system performance analysis}, and \textbf{sustainable infrastructure planning}.
+
+
+
+
+% Ph.D. student in Transportation Engineering at Cornell University. Data scientist skilled in Python, SQL, and statistical modeling, with experience building end-to-end analytics pipelines and dashboards that drive decisions. Comfortable working with complex, messy datasets and rapidly iterating to deliver insights. Proficient in R with hands-on experience using Shiny for interactive analytics.
+\CVSubHeadingListEnd
+
+\section{Research Experience}
+\small
+\CVSubHeadingListStart
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\CVSubheading
+    {\textbf{\textcolor{blue!70}{Graduate Research Assistant}} $|$ {\textcolor{blue!70}{\normalfont{Cornell University}}}}{2023 -- Present}
+\vspace{}
+{Spatiotemporal Machine Learning for Air Quality Risk Prediction, 
+\textit{\href{https://www.sciencedirect.com/science/article/pii/S1361920925004274}{\color{blue}\small TR-D Paper}}}
+% Machine Learning for Air Quality Prediction
+\vspace{-4pt}
+\begin{itemize}
+  \item \footnotesize  Built  \textbf{predictive models} (XGBoost) on millions of records to classify high-risk outcomes; achieved 93\% accuracy.
+  \vspace{-4pt}
+  \item \footnotesize  Developed \textbf{Python pipelines} for feature engineering and error analysis to support consistent decision-making.
+  \vspace{-4pt}
+
+  \item \footnotesize Translated model outputs into \textbf{decision-support summaries} and visualization-ready products for different audiences.
+\end{itemize}
+
+\vspace{-4pt}
+% High-Performance Computing for Scalable Emissions Modeling
+% \vspace{-4pt}
+% \begin{itemize}
+%     \item \footnotesize Designed \textbf{parallelized workflows} with \textbf{I/O optimization}, reducing computational time by \textbf{86\%} for citywide networks.
+%     \vspace{-4pt}
+%     \item \footnotesize Built \textbf{containerized pipelines} on \textbf{cloud infrastructure}, supporting scalable, repeatable scenario analyses.
+% \end{itemize}
+% \vspace{-4pt}
+\small {Cloud-Based Transportation Analytics for Planning and Emissions Evaluation}
+% Cloud Platform for Urban Mobility \& Emissions Analytics
+% \textit{(2 papers submitted, 2 conference presentations)}
+\vspace{-4pt}
+\begin{itemize}
+  \item \footnotesize Built \textbf{ETL pipelines} to clean and integrate large, messy datasets into analysis-ready tables used for operational decisions.
+  \vspace{-4pt}
+  \item \footnotesize Developed dashboards to track KPIs and trends, enabling faster recurring reporting and ad hoc analysis.
+  \vspace{-4pt}
+  \item \footnotesize Contributed to analytical tools for \textbf{transportation system performance}, \textbf{emissions}, and planning evaluation in NYC-focused applications.
+\end{itemize}
+\vspace{-4pt}
+
+\small{AI-Powered Optimization for Dynamic Fleet Management, 
+\textit{\href{https://arxiv.org/pdf/2509.12644}{\color{blue}\small CSP Paper}}}% AI-Powered Optimization for Dynamic Fleet Management
+
+\vspace{-4pt}
+\begin{itemize}
+    \item \footnotesize Developed a \textbf{MINLP} model for dynamic urban air mobility scheduling using \textbf{Gurobi}.
+    \vspace{-4pt}
+    \item \footnotesize Integrated \textbf{AI-driven demand forecasts} for adaptive fleet management and modular pod scheduling.
+    \vspace{-4pt}
+    \item \footnotesize Improved \textbf{operational efficiency} and \textbf{resource utilization} for sustainable air transit systems.
+\end{itemize}
+\vspace{-4pt}
+
+% Siting Optimization Model for Hydrogen Infrastructure Deployment
+\small{Infrastructure Siting Optimization for Emerging Energy Systems
+\textit{\href{https://www.sciencedirect.com/science/article/pii/S0959652626006876?dgcid=author} {\color{blue} \small \textit{JCPR Paper}}}
+
+\vspace{-4pt}
+
+\begin{itemize}
+    \item \footnotesize Built a \textbf{MILP} model for optimal siting of hydrogen refueling stations using \textbf{freight flow} and \textbf{hydrogen supply chain} data.
+    \vspace{-4pt}
+    \item \footnotesize Solved complex location-allocation problems using \textbf{Gurobi} to minimize infrastructure costs while expanding coverage.
+\end{itemize}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\CVSubheading
+    {\textcolor{blue!70}{\textbf{Graduate Research Assistant}} $|$ {\textcolor{blue!70}{\normalfont{Sharif University of Technology}}}}{2020 -- 2023}
+\vspace{}
+Rail Operations Optimization Under Disruptions,  \textit{\href{https://www.sciencedirect.com/science/article/pii/S2950550X24000335}{\color{blue}\small DTE Paper}}}\vspace{-4pt}
+\begin{itemize}
+    \item \footnotesize Developed \textbf{Integer Programming} models using \textbf{CPLEX} to optimize urban rail \textbf{rescheduling} under disruptions.
+    \vspace{-4pt}
+    \item \footnotesize Achieved \textbf{88\% reduction in computational time} through advanced \textbf{scheduling algorithms}.
+\end{itemize}
+\vspace{-4pt}
+
+Optimization Framework for EV Routing and Shared Mobility,
+\textit{\href{https://www.sciencedirect.com/science/article/pii/S2950550X26000087}{\color{blue}\small DTE Paper}}}\vspace{-4pt}
+\begin{itemize}
+\item \footnotesize Developed a framework for \textbf{EV routing} integrating \textbf{time-dependent travel times}, and \textbf{nonlinear}.
+\vspace{-4pt}
+
+\item \footnotesize Implemented \textbf{graph-based routing} and \textbf{scheduling algorithms}in Python to handle large urban networks.
+
+\end{itemize}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\CVSubHeadingListEnd
+
+% % ===== Research Experience Section =====
+% \section{Research Experience}
+% \small
+% \CVSubHeadingListStart
+
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% % ----- Cornell University -----
+% \CVSubheading
+%     {\textbf{\textcolor{blue!70}{Graduate Research Assistant}} $|$ {\textcolor{blue!70}{\normalfont{Cornell University}}}}{2023 -- Present}
+% \vspace{-6pt}
+
+% \small Web-Based Platforms for Transportation Planning and Emissions Modeling
+% \vspace{-4pt}
+% \textit{(2 papers submitted, 2 conference presentations)}
+
+% \begin{itemize}[itemsep=1pt, topsep=2pt]
+%     \item \footnotesize Built \textbf{Python}-based \textbf{cloud platforms} with \textbf{ETL pipelines} for city-scale \textbf{emissions} and \textbf{congestion management}.
+%     \item \footnotesize Delivered \textbf{interactive dashboards} and \textbf{high-resolution spatial modeling} for \textbf{environmental justice} evaluation.
+% \end{itemize}
+
+% \vspace{-4pt}
+% Spatiotemporal PM\textsubscript{2.5} Hotspot Analysis \textit{(1 paper submitted)}
+% \vspace{-4pt}
+% \begin{itemize}[itemsep=1pt, topsep=2pt]
+%     \item \footnotesize Applied \textbf{Machine Learning} models (\textbf{AutoGluon}, \textbf{XGBoost}, \textbf{Random Forest}) to detect air quality and \textbf{predict hotspots}.
+%     \item \footnotesize Achieved \textbf{93\% accuracy} and \textbf{88\% weighted F1-score}, identifying \textbf{173 persistent hotspots} for targeted interventions.
+% \end{itemize}
+
+% \vspace{-4pt}
+% Turbo MOVES: Scalable Emissions Analysis \textit{(1 paper submitted)}
+% \vspace{-4pt}
+% \begin{itemize}[itemsep=1pt, topsep=2pt]
+%     \item \footnotesize Designed \textbf{parallelized workflows} with \textbf{I/O optimization}, reducing computational time by \textbf{86\%} for citywide networks.
+%     \item \footnotesize Built \textbf{containerized pipelines} on \textbf{cloud infrastructure}, supporting scalable, repeatable scenario analyses.
+% \end{itemize}
+
+% \vspace{-4pt}
+% AI-Driven Adaptive Air Transit Network \textit{(1 paper published, 1 conference presented)}
+% \vspace{-4pt}
+% \begin{itemize}[itemsep=1pt, topsep=2pt]
+%     \item \footnotesize Developed a \textbf{MINLP} model for dynamic \textbf{urban air mobility} scheduling using \textbf{Gurobi} and \textbf{CPLEX}.
+%     \item \footnotesize Integrated \textbf{AI-driven demand forecasts} for adaptive fleet management and modular pod scheduling.
+%     \item \footnotesize Improved \textbf{operational efficiency} and \textbf{resource utilization} for sustainable air transit systems.
+% \end{itemize}
+
+% \vspace{-4pt}
+% Hydrogen Refueling Corridor Planning \textit{(1 paper submitted)}
+% \vspace{-4pt}
+% \begin{itemize}[itemsep=1pt, topsep=2pt]
+%     \item \footnotesize Built a \textbf{MILP} model for optimal siting of hydrogen refueling stations using \textbf{freight flow} and \textbf{hydrogen supply chain} data.
+%     \item \footnotesize Solved complex location-allocation problems using \textbf{Gurobi} to minimize infrastructure costs while expanding coverage.
+% \end{itemize}
+
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% % ----- Sharif University -----
+% \vspace{-6pt}
+% \CVSubheading
+%     {\textcolor{blue!70}{\textbf{Graduate Research Assistant}} $|$ {\textcolor{blue!70}{\normalfont{Sharif University of Technology}}}}{2020 -- 2023}
+% \vspace{-6pt}
+
+% \textbf{Digitalizing Railway Operations} \textit{(1 paper published)}
+% \vspace{-4pt}
+% \begin{itemize}[itemsep=1pt, topsep=2pt]
+%     \item \footnotesize Developed \textbf{Integer Programming} models using \textbf{CPLEX} to optimize urban rail \textbf{rescheduling} under disruptions.
+%     \item \footnotesize Achieved \textbf{88\% reduction in computational time} through advanced \textbf{scheduling algorithms}.
+% \end{itemize}
+
+% \vspace{-4pt}
+% Optimization Framework for Electric Vehicle Routing and Ridesharing \textit{(2 papers submitted)}
+% \vspace{-4pt}
+% \begin{itemize}[itemsep=1pt, topsep=2pt]
+%     \item \footnotesize Developed a framework for \textbf{EV routing} integrating \textbf{time-dependent travel times} and nonlinear constraints.
+%     \item \footnotesize Solved models using \textbf{CPLEX}, \textbf{Gurobi}, and metaheuristics (\textbf{Genetic Algorithm}, \textbf{Simulated Annealing}).
+% \end{itemize}
+
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% \CVSubHeadingListEnd
+% -----------------------------------------------
+% RESEARCH EXPERIENCE
+% -----------------------------------------------
+% \section{Research Experience}
+%   \CVSubHeadingListStart
+  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% \CVSubheading
+%     {\textbf{Graduate Research Assistant} $|$ {\normalfont{Cornell University}}}{2023 -- Present}
+
+% \textbf{Web-Based Platforms for Transportation Planning and Emissions Modeling} 
+% \textit{(2 papers submitted, 2 conference presentations)}
+
+%   \begin{itemize}
+%     \item \small Built integrated, \textbf{cloud-based platforms} using \textbf{Python}, and \textbf{ETL pipelines} for large-scale \textbf{emissions modeling} and \textbf{congestion management} in New York City.
+%     \item \small Implemented a \textbf{queue-augmented speed-flow engine} and \textbf{scalable workflows}, enabling \textbf{real-time policy analysis} (e.g., congestion pricing, electrification) with \textbf{10$\times$ faster simulations}.
+%     \item \small Delivered \textbf{interactive dashboards} and \textbf{high-resolution spatial modeling} to support environmental justice evaluation and practitioner decision-making.
+%   \end{itemize}
+
+%   \textbf{Spatiotemporal PM\textsubscript{2.5} Hotspot Analysis} \textit{(1 paper submitted)}
+%   \begin{itemize}
+%     \item \small Applied \textbf{Machine Learning} models (\textbf{AutoGluon}, \textbf{XGBoost}, \textbf{Random Forest}) to detect air quality trends and \textbf{predict hotspots} using 10 years of PM\textsubscript{2.5} data.
+%     \item \small Achieved \textbf{93\% accuracy} and \textbf{88\% weighted F1-score}, identifying \textbf{173 persistent hotspots} for targeted interventions.
+%   \end{itemize}
+
+%   \textbf{Turbo MOVES: Scalable Emissions Analysis} \textit{(1 paper submitted)}
+%   \begin{itemize}
+%     \item \small Designed \textbf{parallelized MOVES workflows} with \textbf{I/O optimization}, reducing computational time by \textbf{86\%} for citywide transportation networks.
+%     \item \small Built \textbf{containerized pipelines} on \textbf{cloud infrastructure}, supporting scalable, repeatable scenario analyses.
+%   \end{itemize}
+
+%   \textbf{AI-Driven Adaptive Air Transit Network} \textit{(1 paper submitted, 1 conference presented)}
+%   \begin{itemize}
+%     \item \small Developed a \textbf{MINLP} model for dynamic \textbf{urban air mobility} scheduling using \textbf{Gurobi} and \textbf{CPLEX}.
+%     \item \small Integrated \textbf{AI-driven demand forecasts} for adaptive fleet management and modular pod scheduling.
+%     \item \small Improved \textbf{operational efficiency} and \textbf{resource utilization} for sustainable air transit systems.
+%   \end{itemize}
+
+%   \textbf{Hydrogen Refueling Corridor Planning} \textit{(1 paper submitted)}
+%   \begin{itemize}
+%     \item \small Built a \textbf{MILP} model for optimal siting of hydrogen refueling stations using \textbf{freight flow} and \textbf{green hydrogen supply chain} data.
+%     \item \small Solved complex location-allocation problems using \textbf{Gurobi} to minimize infrastructure costs while expanding coverage.
+%   \end{itemize}
+
+%   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%   \CVSubheading
+%     {\textbf{Graduate Research Assistant} $|$ {\normalfont{Sharif University of Technology}}}{2020 -- 2023}
+%   \textbf{Digitalizing Railway Operations} \textit{(1 paper submitted)}
+%   \begin{itemize}
+%     \item \small Developed \textbf{Integer Programming} models using \textbf{CPLEX} and \textbf{Gurobi} to optimize urban and interurban rail \textbf{rescheduling} under disruptions.
+%     \item \small Achieved \textbf{88\% reduction in computational time} through advanced \textbf{scheduling algorithms} and \textbf{metaheuristics} such as \textbf{Genetic Algorithm} and \textbf{Simulated Annealing}.
+%   \end{itemize}
+
+% \textbf{Optimization Framework for Electric Vehicle Routing and Ridesharing} \textit{(2 papers submitted)}
+% \begin{itemize}
+%     \item \small Developed a comprehensive framework for \textbf{electric vehicle (EV) routing} and \textbf{autonomous ridesharing optimization}, integrating \textbf{time-dependent travel times}, \textbf{nonlinear charging functions}, and real-time routing constraints.
+%     \item \small Implemented and solved models using \textbf{CPLEX} and \textbf{Gurobi}, incorporating advanced optimization techniques such as \textbf{Genetic Algorithm} and \textbf{Simulated Annealing}.
+%     \item \small Achieved a \textbf{17\% reduction in private vehicle miles traveled} and improved fleet utilization through dynamic scheduling, charging delay modeling, and adaptive resource allocation.
+% \end{itemize}
+%   \CVSubHeadingListEnd
+
+
+% \textbf{Urban Transportation, Environment, and Community Health for NYC} \textit{(One Submitted Paper)} \\
+% • Built an integrated modeling platform to quantify traffic-related \textbf{PM\textsubscript{2.5}} emissions and human exposure across NYC.\\
+% • Applied fine-scale spatial (20m × 20m) and temporal (hourly) modeling to evaluate the impacts of congestion pricing and electrification.\\
+% • Identified spatial inequities, supporting \textbf{environmental justice} analyses and policy development.\\[6pt]
+
+
+
+% \textbf{TEAM-NYC: Web-Based Transportation and Environment Analysis Model} \textit{Presented at AMPO 2025} \\
+% • Developed a cloud-based emissions modeling platform using \textbf{Python}, \textbf{MOVES 5}, and \textbf{ETL pipelines} to integrate link-level traffic data across NYC’s nine-county region.\\
+% • Implemented scalable computational workflows, enabling \textbf{real-time policy scenario analysis} for congestion pricing and electrification.\\
+% • Improved simulation speed by \textbf{10×} and supported environmental justice evaluation with high-resolution spatial modeling (20m × 20m grid).\\[6pt]
+
+% \textbf{CMP-NYC: Congestion Management Process Platform} \textit{Presented at AMPO 2025} \\
+% • Designed an interactive, web-based platform for congestion management, integrating data from the New York Best Practice Model.\\
+% • Built a \textbf{queue-augmented speed-flow engine} using \textbf{Python} and \textbf{cloud computing} to estimate mobility and reliability metrics from the link to the regional scale.\\
+% • Enabled planners to simulate scenarios like cordon pricing and adaptive signal coordination with intuitive dashboards for practitioners.\\[6pt]
+
+
+
+%-----EDUCATION----------------------------------------------------------------
+\section{Education}
+\small
+\CVSubHeadingListStart
+
+% ===== Cornell University =====
+\CVSubheading
+  {Cornell University}{2023 -- Present}
+  {\footnotesize Ph.D. in Transportation Engineering, GPA: 4.03/4.3}{Ithaca, NY, USA}
+\vspace{3pt} % Space between entries
+
+% ===== Sharif University =====
+\CVSubheading
+  {Sharif University of Technology (SUT)}{2020 -- 2023}
+  {\footnotesize M.Sc. in Transportation Engineering, GPA: 4/4, Ranked 1st Among All Students}{Tehran, Iran}
+\vspace{3pt} % Space between entries
+
+% ===== University of Tehran =====
+\CVSubheading
+  {University of Tehran (UT)}{2015 -- 2020}
+  {\footnotesize B.Sc. in Civil Engineering, GPA: 3.61/4}{Tehran, Iran}
+
+
+\CVSubHeadingListEnd
+
+
+
+% %-----EDUCATION----------------------------------------------------------------
+% \section{Education}
+% \CVSubHeadingListStart
+
+% % Cornell University
+% \noindent
+% \begin{tabular*}{\textwidth}{@{\extracolsep{\fill}} l l}
+%     \includegraphics[width=0.7cm]{cornell.png} &
+%     \textbf{Cornell University} \hfill \textit{Ithaca, NY, USA} 
+%     & Ph.D. in Transportation Engineering \hfill GPA: 4.03/4.30 \\
+%     & \textcolor{gray}{Aug. 2023 -- Present} \\
+% \end{tabular*}
+% \vspace{3mm}
+
+% % Sharif University
+% \noindent
+% \begin{tabular*}{\textwidth}{@{\extracolsep{\fill}} l l}
+%     \includegraphics[width=0.7cm]{logos/sharif.png} &
+%     \textbf{Sharif University of Technology (SUT)} \hfill \textit{Tehran, Iran} \\
+%     & M.Sc. in Transportation Engineering \hfill GPA: 4.00/4.00 \\
+%     & \textcolor{gray}{2020 -- 2023} \\
+%     & \footnotesize \textbf{Ranked 1st} among all M.Sc. students in Transportation Engineering \\
+% \end{tabular*}
+% \vspace{3mm}
+
+% % University of Tehran
+% \noindent
+% \begin{tabular*}{\textwidth}{@{\extracolsep{\fill}} l l}
+%     \includegraphics[width=0.7cm]{logos/tehran.png} &
+%     \textbf{University of Tehran (UT)} \hfill \textit{Tehran, Iran} \\
+%     & B.Sc. in Civil Engineering \hfill GPA: 3.61/4.00 \\
+%     & \textcolor{gray}{2015 -- 2020} \\
+%     & \footnotesize Ranked within the \textbf{top 20\%} of graduating students \\
+% \end{tabular*}
+
+% \CVSubHeadingListEnd
+
+
+% \section{Technical Skills}
+% \noindent
+% \textbf{Optimization \& Operations Research:} Mathematical Programming (\textbf{Gurobi}, \textbf{CPLEX}), Mixed Integer Programming (\textbf{MILP}, \textbf{MINLP}), Stochastic Optimization, Queueing Theory, Network Flow Models, Simulation Modeling (\textbf{AnyLogic}, Monte Carlo Simulation), Decomposition Methods. 
+
+% \vspace{4pt}
+% \noindent
+% \textbf{Programming \& Tools:} Python (pandas, NumPy, SciPy, scikit-learn, Pyomo, PuLP, matplotlib, seaborn), R (dplyr, ggplot2), SQL, Git.
+
+% \vspace{4pt}
+% \noindent
+% \textbf{Machine Learning:} Supervised Learning (\textbf{XGBoost}, Random Forest), Predictive Modeling, Clustering, Statistical Modeling, Resampling Methods (SMOTE), \textbf{TensorFlow}, \textbf{PyTorch}.
+
+% \vspace{4pt}
+% \noindent
+% \textbf{Data Analytics \& Visualization:} ETL Pipelines, Feature Engineering, Big Data Analytics, Statistical Analysis, Data Wrangling, Dashboard Development (\textbf{Tableau}, \textbf{Power BI}).
+
+% \vspace{4pt}
+% \noindent
+% \textbf{Cloud \& Scalable Computing:} Cloud-based Development, Scalable Pipeline Design, Containerization (Docker).
+
+
+% \section{Technical Skills}
+% \small
+% \begin{tabularx}{\textwidth}{p{0.24\textwidth} X}
+% \textbf{Languages} & Python, SQL, R \\[5pt]
+
+% \textbf{ML / Modeling} & XGBoost, scikit-learn, feature engineering, time-based splits \\[5pt]
+
+% \textbf{Optimization} & MILP/MINLP; Gurobi, CPLEX \\
+% % \textbf{Optimization (optional)} & OR-Tools, Pyomo, CVXPY \\[5pt] % include only if true
+% \\[-2pt]
+
+% \textbf{MLOps / Tools} & Git, Docker, AWS; reproducible workflows \\
+% % \textbf{Big Data (optional)} & Spark / PySpark, Trino/Presto, BigQuery \\ % include only if true
+% \end{tabularx}
+% \vspace{-6pt}
+\section{Technical Skills}
+\small
+\begin{tabularx}{\textwidth}{p{0.27\textwidth} X}
+\textbf{Languages} & Python, R, SQL \\[4pt]
+
+\textbf{Data Science / ML} & pandas, NumPy, scikit-learn, XGBoost, feature engineering, predictive modeling \\[4pt]
+
+\textbf{Optimization} & MILP, MINLP, Gurobi, CPLEX, transportation modeling, network optimization \\[4pt]
+
+\textbf{Data Engineering / Tools} & ETL pipelines, Git, AWS \\
+\end{tabularx}
+\vspace{-6pt}
+
+% \section{Technical Skills}
+% \noindent
+% \textbf{Optimization \& OR:} Mathematical Programming (Gurobi, CPLEX); MILP, MINLP; Stochastic Optimization; Queueing Theory; Network Flow Models; Simulation Modeling (AnyLogic, Monte Carlo Simulation); Decomposition Methods. 
+
+% \vspace{4pt}
+% \noindent
+% \textbf{Programming \& Tools:} Python (pandas, NumPy, SciPy, scikit-learn, Pyomo, PuLP, matplotlib, seaborn); R (dplyr, ggplot2); SQL; C++; Unix/Linux; Git. 
+
+% \vspace{4pt}
+% \noindent
+% \textbf{Machine Learning:} Supervised Learning (XGBoost, Random Forest); Predictive Modeling; Clustering; TensorFlow; PyTorch; Statistical Modeling; SMOTE.
+
+% \vspace{4pt}
+% \noindent
+% \textbf{Data Analytics \& Visualization:} ETL Pipelines; Feature Engineering; Big Data Analytics; Tableau; Power BI.
+
+% \vspace{4pt}
+% \noindent
+% \textbf{Cloud Computing:} Cloud Workflow Development; Scalable Pipelines; Docker.
+
+
+% %-----HONORS AND AWARDS--------------------------------------------------------
+% \section{Honors and Awards}
+% \vspace{-2pt}
+% \noindent
+% \textbf{Student Presentation Competition Certificate}, Association of Metropolitan Planning Organizations (AMPO) \hfill 2025 \\[4pt]
+
+% \noindent
+% \textbf{Ranked 1\textsuperscript{st}} among all M.Sc. Students of Transportation Engineering, SUT \hfill 2023 \\[4pt]
+
+% \noindent
+% \textbf{Ranked 3\textsuperscript{rd}} in Iran's National Universities' Entrance Exam for M.Sc. Degree (among more than 16,000 students) \hfill 2020 \\[4pt]
+
+% % \noindent
+% % \textbf{Ranked within the top 20\%} among 90+ students in the Civil Engineering Department, University of Tehran \hfill 2020 \\[4pt]
+
+% \noindent
+% \textbf{Awarded} University of Tehran Fellowship for M.Sc. \emph{(not attended)} \hfill 2020 \\[4pt]
+
+% \noindent
+% \textbf{Ranked 645\textsuperscript{th}} in Iran's National Universities' Entrance Exam for B.Sc. Degree (among more than 200,000 students) \hfill 2015
+% % %-----TEACHING EXPERIENCE---------------------------------
+% % \section{Teaching Experience}
+% %   \CVSubHeadingListStart
+% %     \CVSubheading
+% %       {\textbf{Teaching Assistance} $|$ {\normalfont{Cornell University}}}{2023 - Present}
+% %     \vspace{}
+% %       {Systems Engineering and Six Sigma, Systems Architecture, Project Management}{}
+
+% %     \CVSubheading
+% %       {\textbf{Teaching Assistance} $|$ {\normalfont{Sharif University of Technology}}}{2020 - 2022}
+% %       \vspace{}
+% %       {Operation Research, Simulation, Transportation System Analysis}{}
+% %     \CVSubheading
+% %       {\textbf{Teaching Assistance} $|$ {\normalfont{University of Tehran}}}{ 2018 - 2020 }
+% %             \vspace{}
+% %       {Static}{}
+% %   \CVSubHeadingListEnd
+
+
+% % %-----Related Projects----------------------------------------------------
+% % \section{Related Projects}
+% \hfill\begin{minipage}{\dimexpr\textwidth-0cm}
+% \begin{itemize}
+%     \item {An Optimization Model for the Time-dependent Electric Vehicles Routing Problem in Shared Travel} $|$ \textbf{\emph{\small{Python \& GAMS}}} \\ \emph{\small{}}
+%     \vspace{-7mm}
+%     % \item {\textbf{Stochastic Multi-class Traffic Assignment for Autonomous and Regular Vehicles in a Transportation Network} $|$ \textbf{\emph{\small{Python \& GAMS}}} \\ \emph{\small{}}}
+%     % \vspace{-5pt}
+%     \item {Developing an Agent-Based Simulation Model for Optimizing a Commodity Distribution System}$|$ \textbf{\emph{\small{Anylogic}}}
+%     \vspace{-5pt}
+%     \item {Developing queue and inventory simulation programs $|$ \textbf{\emph{\small{Python \& ARENA}}}}
+    
+  
+% \end{itemize}
+% \xdef\tpd{\the\prevdepth}
+% \end{minipage}
+
+%-----Publications--------------------------------------------
+% \section{Peer-reviewd Journal Publications}
+% \hfill\begin{minipage}{\dimexpr\textwidth-0.6cm}
+% \begin{itemize}
+
+% % --- Example with DOI hyperlink ---
+% \item[2025] S. Bafandkar, Y. Shafahi, A. Eslami, \textbf{A. Yazdiani}. 
+% \textit{Digitalizing railway operations: An optimization-based train rescheduling model for urban and interurban disrupted networks}. 
+% \textit{Digital Engineering},
+% \href{https://doi.org/10.1016/j.dte.2024.100033}{Link}
+
+% \item[2025] A. Shafiee, \textbf{A. Yazdiani}, H. Rastegar, R. Li, R. Karim, A. Cao, Z. Li, X. Yu, C. Sy, Z. Bao, X. Cheng, \& O. Gao. 
+% \textit{AI-Driven Adaptive Air Transit with Modular Aerial Pods}. 
+% \textit{Computer Science Procedia}. 
+
+
+% \item[2025] D. Lu, \textbf{A. Yazdiani}, T. Fraser, M. Tayarani, \& H. O. Gao. 
+% \textit{Machine learning in spatiotemporal PM\textsubscript{2.5} hotspots analysis for better targeted mitigation strategies}. 
+% \textit{Under Review in Transportation Research Part D}.
+
+% \item[2025] \textbf{A. Yazdiani}, D. Lu, C. Avci, G. Park, C. Closs, M. Tayarani, \& H. O. Gao.  
+% \textit{A Web-based Integrative Transportation and Environment Analysis Model for New York City (TEAM-NYC)}.  
+% \textit{Submitted to Transportation Research Part D}.
+
+% \item[2025] \textbf{A. Yazdiani}, D. Lu, C. Avci, Z. Bao, C. Closs, M. Tayarani, \& H. O. Gao.  
+% \textit{Congestion Management Process (CMP) in the Data Age: Building a Web-based Hierarchical Multi-scale Congestion Management and Analysis Platform}.  
+% \textit{Submitted to Transportation Research Part A}.
+
+
+% \item[2025] C. Avci, \textbf{A. Yazdiani}, R. Srinivasan, M. Khaire, M. Tayarani, \& H. O. Gao.  
+% \textit{uTECH-Turbo MOVES: The Intersection of Software Architectural Innovation and Sustainable Mobility Analysis}. 
+% \textit{Under Review in Transportation Research Part D}.
+
+% \item[2025] D. Lu, \textbf{A. Yazdiani}, C. Avci, M. Tayarani, C. Closs, \& H. O. Gao.  
+% \textit{Urban Transportation, Environment, and Community Health for New York City (UTECH-NYC): From Congestion Pricing and Transportation Electrification to Emissions, Air Quality, and Exposure Risks}.  
+% \textit{Under review in Cities}.
+
+% \item[2025] A. Elmi, \textbf{A. Yazdiani}, \& Y. Shafahi.  
+% \textit{A Scheduling Optimization Model for Dynamic Electric Autonomous Ridesharing with Nonlinear Charging Function}.  
+% \textit{Under Review in International Journal of Transportation Science and Technology}.
+
+% \item[2025] Y. G. Park, \textbf{A. Yazdiani}, R. Zhu, J. Xiao, P. You, X. Cheng, C. Sy, \& H. O. Gao.  
+% \textit{Connecting the Dots: Planning of Hydrogen Refueling Corridors for Scalable Hydrogen Infrastructure Deployment}.  
+% \textit{Under Review in Journal of Cleaner Production}.
+
+
+% \item[2024] T. Fraser, L. Smith, K. Li, \textbf{A. Yazdiani}, Y. Guo, O. Awadalla, O. Gao. 
+% "Cutting Carbon on a Dime: Optimization of Transportation Policy Scenarios for Cost-Effective Emissions Reduction." 
+% \emph{Under Review in Global Environmental Change}.
+
+
+
+% \end{itemize}
+% \xdef\tpd{\the\prevdepth}
+% \end{minipage}
+
+
+
+
+% \section{Research Interests}
+% \hfill\begin{minipage}{\dimexpr\textwidth-0cm}
+% \begin{itemize}
+%     \item []  {Environmental Sustainability in Transportation, Transportation Emissions Modeling, Optimization, Data Analytics, Transportation Equity, Machine Learning}
+
+%     %Traffic Flow, Demand Modelling, Optimization, Connected and Autonomous Vehicles, Data Science, Shared Mobility, Machine Learning
+
+%     %{Optimization, Operation Research, Intelligent Transportation Systems, Transportation Network Modelling, Shared Mobility, Machine Learning, Driver Behavior,Connected and Autonomous Vehicles, Electric Vehicles,Traffic Signal Systems},Transportation Planning, Demand Forecasting, Travel Behavior, Shared Mobility, Data Science, Connected and Autonomous Vehicles, Machine Learning, Optimization
+% \end{itemize}
+% \xdef\tpd{\the\prevdepth}
+% \end{minipage}
+
+
+
+ 
+
+
+
+% %-----Committee & Membership----------------------------------------------------
+% \section{Leadership & Service}
+% \hfill\begin{minipage}{\dimexpr\textwidth-0cm}
+% \begin{itemize}
+% \item [$\vcenter{\hbox{\tiny$\bullet$}}$] {Head Manager of Sixth Annual Civil Engineering Ceremony} \hfill {2019}
+% \vspace{-5pt}
+% \item [$\vcenter{\hbox{\tiny$\bullet$}}$] {Member of Civil Engineering Scientific Association at University of Tehran} \hfill {2019 -- 2020}
+% \end{itemize}
+% \xdef\tpd{\the\prevdepth}
+% \end{minipage}
+
+% %-----References----------------------------------------------------
+% \section{References}
+% \hfill\begin{minipage}{\dimexpr\textwidth-0cm}
+% \begin{itemize}
+
+
+%     \item {\textbf{Prof. Oliver Gao} \\ \small{ Howard Simpson Professor
+% } \\ \small{Department of Civil Engineering, Cornell University}} \\ \small{Email: } \href{mailto:hg55@cornell.edu}{\underline{hg55@cornell.edu}}
+
+%     \item {\textbf{Dr. Tim Fraser} \\ \small{ Research Associate
+% } \\ \small{System  Engineering Program, Cornell Technology}} \\ \small{Email: } \href{mailto:tmf77@cornell.edu}{\underline{tmf77@cornell.edu}}
+
+%     \item {\textbf{Prof. Robert Todd Newman} \\ \small{ Senior Lecturer
+% } \\ \small{Department of Civil Engineering, Cornell University}} \\ \small{Email: } \href{mailto:rtn24@cornell.edu}{\underline{rtn24@cornell.edu}}
+% \end{itemize}
+% \xdef\tpd{\the\prevdepth}
+% \end{minipage}    
+
+
+
+\end{document}

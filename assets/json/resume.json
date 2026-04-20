@@ -1,221 +1,294 @@
 {
   "basics": {
-    "name": "Albert Einstein",
-    "label": "Scientist",
+    "name": "Alireza Yazdiani",
+    "label": "Ph.D. Candidate in Transportation Engineering",
     "image": "",
-    "email": "einstein@example.com",
-    "phone": "(912) 123-4567",
-    "summary": "A German-born theoretical physicist, widely ranked among the greatest and most influential scientists of all time",
+    "email": "ay373@cornell.edu",
+    "phone": "+16073391630",
+    "summary": "Ph.D. candidate in Transportation Engineering at Cornell University with experience in transportation data science, machine learning, and optimization for public-sector decision-making. Develops Python-based analytical pipelines, predictive and statistical models, and MILP/MINLP optimization frameworks for large-scale mobility, logistics, and environmental planning problems.",
     "location": {
-      "address": "2712 Broadway St",
-      "postalCode": "CA 94115",
-      "city": "San Francisco",
-      "countryCode": "US",
-      "region": "California"
+      "city": "Ithaca",
+      "region": "New York",
+      "countryCode": "US"
     },
-    "profiles": []
+    "profiles": [
+      {
+        "network": "LinkedIn",
+        "username": "alireza-yazdiani-7468b075",
+        "url": "https://linkedin.com/in/alireza-yazdiani-7468b075"
+      },
+      {
+        "network": "Google Scholar",
+        "username": "Alireza Yazdiani",
+        "url": "https://scholar.google.com/citations?user=yAJENG4AAAAJ&hl=en"
+      }
+    ]
   },
   "work": [
     {
-      "name": "Institute for Advanced Study, Princeton University",
-      "position": "Professor of Theoretical Physics",
-      "location": "Princeton University, NJ",
-      "startDate": "1933-01-01",
-      "endDate": "1955-01-01",
-      "summary": "Teaching at Palmer Physical Laboratory (now 302 Frist Campus Center). While not a professor at Princeton, I associated with the physics professors and continued to give lectures on campus.",
-      "highlights": ["Relativity", "Description 2."]
+      "name": "Cornell University",
+      "position": "Graduate Research Assistant",
+      "location": "Ithaca, NY, USA",
+      "startDate": "2023-08-01",
+      "endDate": "",
+      "summary": "Civil and Environmental Engineering Department",
+      "highlights": [
+        "Spatiotemporal machine learning for PM2.5 hotspot analysis (93% accuracy with XGBoost)",
+        "MILP/MINLP optimization for hydrogen refueling station siting and urban air mobility scheduling",
+        "ETL pipelines and cloud-based analytics for NYC transportation and emissions modeling"
+      ]
     },
     {
-      "name": "California Institute of Technology",
-      "position": "Visiting Professor",
-      "location": "Pasadena, California, US",
-      "startDate": "1933-01-01",
-      "endDate": "1933-01-01",
-      "summary": "",
-      "highlights": ["Description 1.", "Description 2."]
+      "name": "Cornell University",
+      "position": "Teaching Assistant",
+      "location": "Ithaca, NY, USA",
+      "startDate": "2023-08-01",
+      "endDate": "",
+      "summary": "Graduate Courses, Civil and Environmental Engineering",
+      "highlights": [
+        "Six Sigma Design for Reliable Systems, Systems Architecture, Project Management, Economics and Finance"
+      ]
     },
     {
-      "name": "Kaiser Wilhelm Institute for Physics",
-      "position": "Director",
-      "location": "Berlin, Germany",
-      "startDate": "1917-01-01",
-      "endDate": "1933-01-01",
-      "summary": "",
-      "highlights": []
+      "name": "Sharif University of Technology",
+      "position": "Teaching Assistant",
+      "location": "Tehran, Iran",
+      "startDate": "2020-09-01",
+      "endDate": "2023-06-01",
+      "summary": "Graduate Courses, Department of Civil Engineering",
+      "highlights": [
+        "Operation Research, Transportation System Analysis, Simulation"
+      ]
     },
     {
-      "name": "Karl-Ferdinand University",
-      "position": "Professor of Theoretical Physics",
-      "location": "Prague, Czechoslovakia",
-      "startDate": "1911-01-01",
-      "endDate": "1917-01-01",
-      "summary": "",
-      "highlights": []
-    },
-    {
-      "name": "University of Zurich",
-      "position": "Associate Professor of Theoretical Physics",
-      "location": "Zurich, Switzerland",
-      "startDate": "1909-01-01",
-      "endDate": "1911-01-01",
-      "summary": "",
-      "highlights": []
+      "name": "University of Tehran",
+      "position": "Teaching Assistant",
+      "location": "Tehran, Iran",
+      "startDate": "2018-03-01",
+      "endDate": "2020-01-01",
+      "summary": "Undergraduate Courses, Department of Civil Engineering",
+      "highlights": [
+        "Statics"
+      ]
     }
   ],
   "volunteer": [
     {
-      "organization": "People's Climate March",
-      "location": "Zurich, Switzerland",
-      "position": "Lead Organizer",
-      "startDate": "2014-04-01",
-      "endDate": "2015-07-01",
-      "summary": "Lead organizer for the New York City branch of the People's Climate March, the largest climate march in history.",
-      "highlights": ["Awarded 'Climate Hero' award by Greenpeace for my efforts organizing the march.", "Men of the year 2014 by Time magazine"]
+      "organization": "TEAM-NYC Transportation Initiative",
+      "location": "New York, NY, USA",
+      "position": "Collaborator",
+      "startDate": "2024-01-01",
+      "endDate": "",
+      "summary": "Contributing to cloud-based transportation and environment analysis platform for New York City."
     }
   ],
   "education": [
     {
-      "institution": "University of Zurich",
-      "location": "Zurich, Switzerland",
-      "url": "https://www.uzh.ch/",
-      "area": "Physics",
-      "studyType": "PhD",
-      "startDate": "1900-01-01",
-      "endDate": "1905-01-01",
-      "score": "",
-      "courses": ["Theory of Relativity"],
-      "highlights": ["Description 1.", "Description 2."]
+      "institution": "Cornell University",
+      "location": "Ithaca, NY, USA",
+      "url": "https://www.cornell.edu/",
+      "area": "Transportation Engineering",
+      "studyType": "Ph.D.",
+      "startDate": "2023-08-01",
+      "endDate": "",
+      "score": "4.03/4.3",
+      "courses": [],
+      "highlights": [
+        "Advisor: Prof. Oliver Gao",
+        "Research: Transportation data science, machine learning, optimization"
+      ]
     },
     {
-      "institution": "Eidgenössische Technische Hochschule",
-      "location": "Zurich, Switzerland",
-      "area": "Physics",
-      "studyType": "Federal teaching diploma",
-      "startDate": "1896-01-01",
-      "endDate": "1900-01-01",
-      "score": "",
+      "institution": "Sharif University of Technology (SUT)",
+      "location": "Tehran, Iran",
+      "area": "Transportation Engineering",
+      "studyType": "M.Sc.",
+      "startDate": "2020-09-01",
+      "endDate": "2023-07-01",
+      "score": "4.0/4.0 (18.28/20)",
       "courses": [],
-      "highlights": ["Description 1.", "Description 2."]
+      "highlights": [
+        "Ranked 1st among all M.Sc. students in Transportation Engineering",
+        "Advisor: Prof. Yousef Shafahi"
+      ]
+    },
+    {
+      "institution": "University of Tehran (UT)",
+      "location": "Tehran, Iran",
+      "area": "Civil Engineering",
+      "studyType": "B.Sc.",
+      "startDate": "2015-09-01",
+      "endDate": "2020-01-01",
+      "score": "3.61/4.0 (16.9/20)",
+      "courses": [],
+      "highlights": [
+        "Ranked within the top 20% of graduating students"
+      ]
     }
   ],
   "awards": [
     {
-      "title": "Nobel Prize in Physics",
-      "date": "1921-11-01",
-      "awarder": "Royal Swedish Academy of Sciences",
-      "url": "https://www.nobelprize.org/prizes/physics/1921/einstein/biographical/",
-      "summary": "The Nobel Prizes are five separate prizes that, according to Alfred Nobel's will of 1895, are awarded to 'those who, during the preceding year, have conferred the greatest benefit to humankind.'"
+      "title": "Student Presentation Competition Certificate",
+      "date": "2025-01-01",
+      "awarder": "Association of Metropolitan Planning Organizations (AMPO)",
+      "summary": "Awarded for outstanding student presentation at AMPO annual conference."
     },
     {
-      "title": "Max Planck Medal",
-      "date": "2029-01-01",
-      "awarder": "German Physical Society",
+      "title": "Ranked 1st Among All M.Sc. Students in Transportation Engineering",
+      "date": "2023-07-01",
+      "awarder": "Sharif University of Technology",
       "summary": ""
-    }
-  ],
-  "certificates": [
-    {
-      "name": "Machine Learning",
-      "date": "2018-01-01",
-      "issuer": "Stanford University",
-      "icon": "fa-solid fa-location-dot"
     },
     {
-      "name": "Quantum Computing",
-      "date": "2018-01-01",
-      "issuer": "Stanford University",
-      "icon": "fa-solid fa-tag"
+      "title": "Ranked 3rd in National Universities' Entrance Exam for M.Sc.",
+      "date": "2020-01-01",
+      "awarder": "Iran's National Universities' Entrance Exam",
+      "summary": "Among more than 16,000 students."
     },
     {
-      "name": "Quantum Information",
-      "date": "2018-01-01",
-      "issuer": "Stanford University",
-      "icon": "fa-solid fa-envelope"
+      "title": "University of Tehran Fellowship for M.Sc. (not attended)",
+      "date": "2020-01-01",
+      "awarder": "University of Tehran",
+      "summary": ""
+    },
+    {
+      "title": "Ranked 645th in National Universities' Entrance Exam for B.Sc.",
+      "date": "2015-01-01",
+      "awarder": "Iran's National Universities' Entrance Exam",
+      "summary": "Among more than 200,000 students."
     }
   ],
+  "certificates": [],
   "publications": [
     {
-      "name": "Zur Elektrodynamik bewegter Körper",
-      "publisher": "Annalen der Physik",
-      "releaseDate": "1905-06-30",
-      "url": "https://en.wikisource.org/wiki/Translation:On_the_Electrodynamics_of_Moving_Bodies",
-      "summary": "It concerned an interpretation of the Michelson–Morley experiment and the properties of light and time. Special relativity incorporates the principle that the speed of light is the same for all inertial observers regardless of the state of motion of the source."
+      "name": "Integrated Optimization of Hydrogen Refueling Stations with Green and Blue Hydrogen Production for Freight Corridors",
+      "publisher": "Journal of Cleaner Production",
+      "releaseDate": "2026-01-01",
+      "url": "https://doi.org/10.1016/j.jclepro.2026.148148",
+      "summary": "Optimization framework for siting hydrogen refueling infrastructure along freight corridors."
     },
     {
-      "name": "Über einen die Erzeugung und Verwandlung des Lichtes betreffenden heuristischen Gesichtspunkt",
-      "publisher": "Annalen der Physik",
-      "releaseDate": "1905-03-18",
-      "url": "https://de.wikisource.org/wiki/Über_einen_die_Erzeugung_und_Verwandlung_des_Lichtes_betreffenden_heuristischen_Gesichtspunkt",
-      "summary": "In the second paper, he applied the quantum theory to light to explain the photoelectric effect. In particular, he used the idea of light quanta (photons) to explain experimental results, but stressed the importance of the experimental results. The importance of his work on the photoelectric effect earned him the Nobel Prize in Physics in 1921."
+      "name": "An optimization framework for the time-dependent electric vehicle routing problem with shared mobility: a step toward smart cities",
+      "publisher": "Digital Engineering",
+      "releaseDate": "2026-01-01",
+      "url": "https://doi.org/10.1016/j.dte.2026.100095",
+      "summary": "Time-dependent EV routing optimization integrating shared mobility for smart city applications."
     },
     {
-      "name": "Die Grundlage der allgemeinen Relativitätstheorie",
-      "publisher": "Annalen der Physik",
-      "releaseDate": "1916-03-20",
-      "url": "https://de.wikisource.org/wiki/Die_Grundlage_der_allgemeinen_Relativitätstheorie",
-      "summary": "The publication of the theory of general relativity made him internationally famous. He was professor of physics at the universities of Zurich (1909–1911) and Prague (1911–1912), before he returned to ETH Zurich (1912–1914)."
+      "name": "Machine learning in spatiotemporal PM2.5 hotspots analysis for better targeted mitigation strategies",
+      "publisher": "Transportation Research Part D",
+      "releaseDate": "2025-01-01",
+      "url": "https://www.sciencedirect.com/science/article/pii/S1361920925004274",
+      "summary": "XGBoost-based models achieving 93% accuracy for identifying persistent PM2.5 hotspots."
+    },
+    {
+      "name": "Digitalizing railway operations: An optimization-based train rescheduling model for urban and interurban disrupted networks",
+      "publisher": "Digital Engineering",
+      "releaseDate": "2025-01-01",
+      "url": "https://doi.org/10.1016/j.dte.2024.100033",
+      "summary": "Integer programming model for urban rail rescheduling achieving 88% reduction in computational time."
+    },
+    {
+      "name": "AI-Driven Adaptive Air Transit with Modular Aerial Pods",
+      "publisher": "Computer Science Procedia",
+      "releaseDate": "2025-01-01",
+      "url": "https://doi.org/10.1016/j.procs.2025.08.206",
+      "summary": "MINLP model for dynamic urban air mobility scheduling with AI-driven demand forecasting."
     }
   ],
   "skills": [
     {
-      "name": "Physics",
-      "level": "Master",
-      "icon": "fa-solid fa-hashtag",
-      "keywords": [
-        "Quantum Mechanics",
-        "Quantum Computing",
-        "Quantum Information",
-        "Quantum Cryptography",
-        "Quantum Communication",
-        "Quantum Teleportation"
-      ]
+      "name": "Programming Languages",
+      "level": "Expert",
+      "icon": "fa-solid fa-code",
+      "keywords": ["Python", "R", "SQL"]
+    },
+    {
+      "name": "Data Science & Machine Learning",
+      "level": "Expert",
+      "icon": "fa-solid fa-brain",
+      "keywords": ["pandas", "NumPy", "scikit-learn", "XGBoost", "feature engineering", "predictive modeling"]
+    },
+    {
+      "name": "Optimization",
+      "level": "Expert",
+      "icon": "fa-solid fa-chart-line",
+      "keywords": ["MILP", "MINLP", "Gurobi", "CPLEX", "transportation modeling", "network optimization"]
+    },
+    {
+      "name": "Data Engineering & Tools",
+      "level": "Proficient",
+      "icon": "fa-solid fa-database",
+      "keywords": ["ETL pipelines", "Git", "AWS", "Docker"]
     }
   ],
   "languages": [
     {
-      "language": "German",
+      "language": "Persian",
       "fluency": "Native speaker",
       "icon": ""
     },
     {
       "language": "English",
-      "fluency": "Fluent",
+      "fluency": "Fluent (TOEFL iBT: 101)",
       "icon": ""
     }
   ],
   "interests": [
     {
-      "name": "Physics",
-      "icon": "fa-solid fa-tag",
+      "name": "Transportation Data Science",
+      "icon": "fa-solid fa-car",
       "keywords": [
-        "Quantum Mechanics",
-        "Quantum Computing",
-        "Quantum Information",
-        "Quantum Cryptography",
-        "Quantum Communication",
-        "Quantum Teleportation"
+        "Intelligent Transportation Systems",
+        "Agent-based Modeling",
+        "Optimization",
+        "Data Analytics",
+        "Machine Learning"
+      ]
+    },
+    {
+      "name": "Sustainable Mobility",
+      "icon": "fa-solid fa-leaf",
+      "keywords": [
+        "Electric Vehicles",
+        "Hydrogen Infrastructure",
+        "Air Quality",
+        "Environmental Justice",
+        "Emissions Modeling"
       ]
     }
   ],
   "references": [
     {
-      "name": "Professor John Doe",
-      "icon": "fa-solid fa-laptop",
-      "reference": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam condimentum, diam quis convallis euismod, arcu mi ullamcorper lorem, a vestibulum nunc magna at sem. Sed in risus ac felis varius blandit."
+      "name": "Prof. Oliver Gao",
+      "icon": "fa-solid fa-user-tie",
+      "reference": "Howard Simpson Professor, Department of Civil Engineering, Cornell University. Email: hg55@cornell.edu"
     },
     {
-      "name": "Professor Jane Smith",
-      "icon": "fa-solid fa-thumbtack",
-      "reference": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam condimentum, diam quis convallis euismod, arcu mi ullamcorper lorem, a vestibulum nunc magna at sem. Sed in risus ac felis varius blandit."
+      "name": "Prof. Tim Fraser",
+      "icon": "fa-solid fa-user-tie",
+      "reference": "Research Associate, Systems Engineering Program, Cornell Tech. Email: tmf77@cornell.edu"
+    },
+    {
+      "name": "Prof. Robert Todd Newman",
+      "icon": "fa-solid fa-user-tie",
+      "reference": "Senior Lecturer, Department of Civil Engineering, Cornell University. Email: rtn24@cornell.edu"
     }
   ],
   "projects": [
     {
-      "name": "Quantum Computing",
-      "summary": "Quantum computing is the use of quantum-mechanical phenomena such as superposition and entanglement to perform computation. Computers that perform quantum computations are known as quantum computers.",
-      "highlights": ["Quantum Teleportation", "Quantum Cryptography"],
-      "startDate": "2018-01-01",
-      "endDate": "2018-01-01"
+      "name": "TEAM-NYC: Transportation and Environment Analysis Model",
+      "summary": "Cloud-based emissions modeling platform using Python, MOVES 5, and ETL pipelines to integrate link-level traffic data across NYC's nine-county region for policy scenario analysis.",
+      "highlights": ["Congestion pricing analysis", "Transportation electrification", "Environmental justice evaluation"],
+      "startDate": "2024-01-01",
+      "endDate": ""
+    },
+    {
+      "name": "CMP-NYC: Congestion Management Process Platform",
+      "summary": "Interactive web-based platform for congestion management integrating data from the New York Best Practice Model with queue-augmented speed-flow engine.",
+      "highlights": ["Hierarchical multi-scale analysis", "Real-time policy simulation", "Practitioner dashboards"],
+      "startDate": "2024-01-01",
+      "endDate": ""
     }
   ]
 }
