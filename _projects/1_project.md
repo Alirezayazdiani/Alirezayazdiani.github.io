@@ -2,7 +2,7 @@
 layout: page
 title: Hydrogen Refueling Infrastructure Optimization
 description: Siting green and blue hydrogen refueling stations along freight corridors using MILP optimization
-img: assets/img/1.jpg
+img: assets/img/hrs_ga.jpg
 importance: 1
 category: research
 related_publications: true
@@ -11,6 +11,15 @@ related_publications: true
 ## Overview
 
 This project develops a **Mixed Integer Linear Programming (MILP)** optimization framework for the strategic siting of hydrogen refueling stations (HRS) along major freight corridors. The framework simultaneously accounts for **green hydrogen** (electrolysis from renewables) and **blue hydrogen** (natural gas + carbon capture) supply chains to minimize total infrastructure cost while ensuring adequate coverage for heavy-duty freight vehicles.
+
+<div class="row">
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.liquid loading="eager" path="assets/img/hrs_ga.jpg" title="Graphical abstract — hydrogen refueling corridor optimization" class="img-fluid rounded z-depth-1" %}
+    </div>
+</div>
+<div class="caption">
+    Graphical abstract: integrated optimization of hydrogen refueling stations with green and blue hydrogen production for freight corridors.
+</div>
 
 ## Motivation
 
@@ -22,6 +31,18 @@ Heavy-duty freight trucks contribute disproportionately to transportation greenh
 - **Dual supply chain modeling:** green (electrolysis) and blue (SMR + CCS) hydrogen with distinct cost structures and emissions profiles
 - **Freight flow demand:** origin-destination freight data used to estimate hydrogen demand at corridor candidate sites
 - **Coverage constraints:** station spacing ensures compatibility with fuel cell truck operating ranges
+
+<div class="row">
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.liquid loading="eager" path="assets/img/hrs_gr2.jpg" title="Model framework" class="img-fluid rounded z-depth-1" %}
+    </div>
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.liquid loading="eager" path="assets/img/hrs_gr8.jpg" title="Optimization results" class="img-fluid rounded z-depth-1" %}
+    </div>
+</div>
+<div class="caption">
+    Left: model framework showing supply chain and corridor network structure. Right: optimization results showing optimal HRS siting across freight corridors.
+</div>
 
 ## Key Results
 

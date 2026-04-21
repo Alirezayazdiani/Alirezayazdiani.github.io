@@ -2,7 +2,7 @@
 layout: page
 title: Spatiotemporal PM2.5 Hotspot Detection with Machine Learning
 description: XGBoost-based models achieving 93% accuracy for identifying persistent air quality hotspots across urban transportation networks
-img: assets/img/3.jpg
+img: assets/img/ml_pm25_ga.jpg
 importance: 3
 category: research
 related_publications: true
@@ -11,6 +11,15 @@ related_publications: true
 ## Overview
 
 This project applies **spatiotemporal machine learning** to identify persistent fine particulate matter (PM₂.₅) hotspots across urban regions, enabling transportation planners and public health officials to target mitigation strategies where they matter most. Using over a decade of PM₂.₅ monitoring data linked to transportation activity, the models classify high-risk locations with high accuracy and interpretability.
+
+<div class="row">
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.liquid loading="eager" path="assets/img/ml_pm25_ga.jpg" title="Graphical abstract — spatiotemporal PM2.5 hotspot analysis" class="img-fluid rounded z-depth-1" %}
+    </div>
+</div>
+<div class="caption">
+    Graphical abstract: machine learning in spatiotemporal PM₂.₅ hotspot analysis for better targeted mitigation strategies.
+</div>
 
 ## Motivation
 
