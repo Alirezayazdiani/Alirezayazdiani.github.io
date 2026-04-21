@@ -1,80 +1,37 @@
 ---
 layout: page
-title: project 5
-description: a project with a background image
-img: assets/img/1.jpg
-importance: 3
-category: fun
+title: AI-Driven Urban Air Mobility with Modular Aerial Pods
+description: MINLP optimization model for dynamic scheduling of modular aerial pod fleets using AI-driven demand forecasting
+img: assets/img/5.jpg
+importance: 5
+category: research
+related_publications: true
 ---
 
-Every project has a beautiful feature showcase page.
-It's easy to include images in a flexible 3-column grid format.
-Make your photos 1/3, 2/3, or full width.
+## Overview
 
-To give your project a background in the portfolio page, just add the img tag to the front matter like so:
+This project designs an **AI-powered optimization framework** for next-generation **Urban Air Mobility (UAM)** systems using modular aerial pods. As cities explore vertical transportation to relieve ground-level congestion, effective fleet management — dynamically assigning, routing, and scheduling modular pods across a vertiport network — becomes critical. This work combines **Mixed Integer Nonlinear Programming (MINLP)** with AI-driven demand forecasting to achieve adaptive, efficient UAM operations.
 
-    ---
-    layout: page
-    title: project
-    description: a project with a background image
-    img: /assets/img/12.jpg
-    ---
+## Motivation
 
-<div class="row">
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/1.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/3.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/5.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-</div>
-<div class="caption">
-    Caption photos easily. On the left, a road goes through a tunnel. Middle, leaves artistically fall in a hipster photoshoot. Right, in another hipster photoshoot, a lumberjack grasps a handful of pine needles.
-</div>
-<div class="row">
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/5.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-</div>
-<div class="caption">
-    This image can also have a caption. It's like magic.
-</div>
+Urban Air Mobility promises to transform intra-city transportation using electric vertical takeoff and landing (eVTOL) vehicles. However, the operational complexity of dynamic pod scheduling — matching modular vehicle configurations to fluctuating demand across multiple vertiports while managing battery charging and fleet repositioning — requires sophisticated optimization methods beyond conventional approaches. AI-forecasted demand enables proactive rather than reactive fleet management.
 
-You can also put regular text between your rows of images.
-Say you wanted to write a little bit about your project before you posted the rest of the images.
-You describe how you toiled, sweated, _bled_ for your project, and then... you reveal its glory in the next row of images.
+## Methods
 
-<div class="row justify-content-sm-center">
-    <div class="col-sm-8 mt-3 mt-md-0">
-        {% include figure.liquid path="assets/img/6.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-sm-4 mt-3 mt-md-0">
-        {% include figure.liquid path="assets/img/11.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-</div>
-<div class="caption">
-    You can also have artistically styled 2/3 + 1/3 images, like these.
-</div>
+- **MINLP formulation** solved with **Gurobi** capturing:
+  - Dynamic pod assignment across vertiport network
+  - Modular vehicle configuration (pod combinations)
+  - Battery state and charging scheduling
+  - Fleet repositioning decisions
+- **AI demand forecasting:** Machine learning models predict spatiotemporal passenger demand to drive proactive fleet positioning
+- **Adaptive scheduling:** Real-time demand updates feed back into the optimization loop
 
-The code is simple.
-Just wrap your images with `<div class="col-sm">` and place them inside `<div class="row">` (read more about the <a href="https://getbootstrap.com/docs/4.4/layout/grid/">Bootstrap Grid</a> system).
-To make images responsive, add `img-fluid` class to each; for rounded corners and shadows use `rounded` and `z-depth-1` classes.
-Here's the code for the last row of images above:
+## Key Results
 
-{% raw %}
+- The integrated AI-optimization framework improves **operational efficiency** and **resource utilization** compared to static scheduling
+- Modular pod configurations allow flexible capacity matching to demand variability
+- The model provides a computational foundation for real-world UAM fleet management systems
 
-```html
-<div class="row justify-content-sm-center">
-  <div class="col-sm-8 mt-3 mt-md-0">
-    {% include figure.liquid path="assets/img/6.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-  </div>
-  <div class="col-sm-4 mt-3 mt-md-0">
-    {% include figure.liquid path="assets/img/11.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-  </div>
-</div>
-```
+## Publication
 
-{% endraw %}
+{% cite shafiee2025airtransit %}

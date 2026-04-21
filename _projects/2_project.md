@@ -1,81 +1,37 @@
 ---
 layout: page
-title: project 2
-description: a project with a background image and giscus comments
-img: assets/img/3.jpg
+title: Time-Dependent EV Routing for Shared Mobility
+description: Optimization framework for electric vehicle routing with time-varying travel times and shared mobility integration
+img: assets/img/2.jpg
 importance: 2
-category: work
-giscus_comments: true
+category: research
+related_publications: true
 ---
 
-Every project has a beautiful feature showcase page.
-It's easy to include images in a flexible 3-column grid format.
-Make your photos 1/3, 2/3, or full width.
+## Overview
 
-To give your project a background in the portfolio page, just add the img tag to the front matter like so:
+This project presents a comprehensive **optimization framework** for the **Time-Dependent Electric Vehicle Routing Problem (TD-EVRP)** integrated with shared mobility services. Unlike classical routing problems, this framework explicitly captures time-varying travel times, nonlinear battery charging functions, and the coordination of multiple passengers within a shared ridesharing system — a critical step toward **smart city** mobility.
 
-    ---
-    layout: page
-    title: project
-    description: a project with a background image
-    img: /assets/img/12.jpg
-    ---
+## Motivation
 
-<div class="row">
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/1.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/3.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/5.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-</div>
-<div class="caption">
-    Caption photos easily. On the left, a road goes through a tunnel. Middle, leaves artistically fall in a hipster photoshoot. Right, in another hipster photoshoot, a lumberjack grasps a handful of pine needles.
-</div>
-<div class="row">
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/5.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-</div>
-<div class="caption">
-    This image can also have a caption. It's like magic.
-</div>
+Urban transportation systems face dual pressures: reducing emissions through vehicle electrification and improving efficiency through ride-sharing. Electric vehicles introduce new constraints (range anxiety, charging time, nonlinear charging curves) that interact with the combinatorial complexity of shared mobility routing. Existing models treat these challenges separately; this work addresses them jointly.
 
-You can also put regular text between your rows of images.
-Say you wanted to write a little bit about your project before you posted the rest of the images.
-You describe how you toiled, sweated, _bled_ for your project, and then... you reveal its glory in the next row of images.
+## Methods
 
-<div class="row justify-content-sm-center">
-    <div class="col-sm-8 mt-3 mt-md-0">
-        {% include figure.liquid path="assets/img/6.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-sm-4 mt-3 mt-md-0">
-        {% include figure.liquid path="assets/img/11.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-</div>
-<div class="caption">
-    You can also have artistically styled 2/3 + 1/3 images, like these.
-</div>
+- **Mathematical Programming:** Mixed Integer Programming (MIP) formulation capturing:
+  - Time-dependent arc travel times (peak/off-peak variation)
+  - Nonlinear battery state-of-charge dynamics
+  - Passenger pickup/delivery coordination with time windows
+  - En-route charging scheduling at public charging stations
+- **Solvers:** Implemented and solved using **CPLEX** and **Gurobi**
+- **Metaheuristics:** Genetic Algorithm and Simulated Annealing for large-scale instances
 
-The code is simple.
-Just wrap your images with `<div class="col-sm">` and place them inside `<div class="row">` (read more about the <a href="https://getbootstrap.com/docs/4.4/layout/grid/">Bootstrap Grid</a> system).
-To make images responsive, add `img-fluid` class to each; for rounded corners and shadows use `rounded` and `z-depth-1` classes.
-Here's the code for the last row of images above:
+## Key Results
 
-{% raw %}
+- The framework achieves a **17% reduction in private vehicle miles traveled** compared to non-shared EV routing
+- Nonlinear charging modeling significantly improves solution feasibility vs. linear approximations
+- Time-dependent travel times reduce total fleet energy consumption by avoiding peak congestion windows
 
-```html
-<div class="row justify-content-sm-center">
-  <div class="col-sm-8 mt-3 mt-md-0">
-    {% include figure.liquid path="assets/img/6.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-  </div>
-  <div class="col-sm-4 mt-3 mt-md-0">
-    {% include figure.liquid path="assets/img/11.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-  </div>
-</div>
-```
+## Publication
 
-{% endraw %}
+{% cite yazdiani2026evrp %}

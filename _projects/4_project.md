@@ -1,80 +1,38 @@
 ---
 layout: page
-title: project 4
-description: another without an image
-img:
-importance: 3
-category: fun
+title: Railway Operations Optimization Under Disruptions
+description: Integer programming model for train rescheduling in disrupted urban and interurban rail networks, achieving 88% reduction in computational time
+img: assets/img/4.jpg
+importance: 4
+category: research
+related_publications: true
 ---
 
-Every project has a beautiful feature showcase page.
-It's easy to include images in a flexible 3-column grid format.
-Make your photos 1/3, 2/3, or full width.
+## Overview
 
-To give your project a background in the portfolio page, just add the img tag to the front matter like so:
+This project develops an **Integer Programming (IP)** model for real-time train rescheduling in disrupted urban and interurban rail networks. When incidents — equipment failures, track blockages, or unexpected delays — cascade through a rail network, operators need fast, reliable rescheduling decisions. This model provides optimal or near-optimal rescheduling plans within operational time constraints, enabling the **digitalization of railway operations**.
 
-    ---
-    layout: page
-    title: project
-    description: a project with a background image
-    img: /assets/img/12.jpg
-    ---
+## Motivation
 
-<div class="row">
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/1.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/3.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/5.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-</div>
-<div class="caption">
-    Caption photos easily. On the left, a road goes through a tunnel. Middle, leaves artistically fall in a hipster photoshoot. Right, in another hipster photoshoot, a lumberjack grasps a handful of pine needles.
-</div>
-<div class="row">
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/5.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-</div>
-<div class="caption">
-    This image can also have a caption. It's like magic.
-</div>
+Rail disruptions cause significant passenger delays and can propagate across entire networks. Manual rescheduling by dispatchers is slow and suboptimal. Automated optimization models that can rapidly recompute schedules — accounting for train order, platform availability, connection protection, and crew constraints — are essential for modern rail operations management.
 
-You can also put regular text between your rows of images.
-Say you wanted to write a little bit about your project before you posted the rest of the images.
-You describe how you toiled, sweated, _bled_ for your project, and then... you reveal its glory in the next row of images.
+## Methods
 
-<div class="row justify-content-sm-center">
-    <div class="col-sm-8 mt-3 mt-md-0">
-        {% include figure.liquid path="assets/img/6.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-sm-4 mt-3 mt-md-0">
-        {% include figure.liquid path="assets/img/11.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-</div>
-<div class="caption">
-    You can also have artistically styled 2/3 + 1/3 images, like these.
-</div>
+- **Integer Programming formulation** capturing:
+  - Train order and headway constraints
+  - Platform and track capacity
+  - Connection protection between services
+  - Crew and rolling stock feasibility
+- **Solver:** IBM **CPLEX** with branch-and-bound
+- **Algorithmic enhancements:** Advanced scheduling algorithms and metaheuristics (Genetic Algorithm, Simulated Annealing) for large-scale networks
+- **Case studies:** Urban metro and interurban rail disruption scenarios
 
-The code is simple.
-Just wrap your images with `<div class="col-sm">` and place them inside `<div class="row">` (read more about the <a href="https://getbootstrap.com/docs/4.4/layout/grid/">Bootstrap Grid</a> system).
-To make images responsive, add `img-fluid` class to each; for rounded corners and shadows use `rounded` and `z-depth-1` classes.
-Here's the code for the last row of images above:
+## Key Results
 
-{% raw %}
+- Achieved an **88% reduction in computational time** compared to baseline formulations through algorithmic improvements
+- The model produces feasible rescheduling plans within operational time windows required by dispatchers
+- Applicable to both urban metro disruptions and long-distance interurban network incidents
 
-```html
-<div class="row justify-content-sm-center">
-  <div class="col-sm-8 mt-3 mt-md-0">
-    {% include figure.liquid path="assets/img/6.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-  </div>
-  <div class="col-sm-4 mt-3 mt-md-0">
-    {% include figure.liquid path="assets/img/11.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-  </div>
-</div>
-```
+## Publication
 
-{% endraw %}
+{% cite bafandkar2025railway %}

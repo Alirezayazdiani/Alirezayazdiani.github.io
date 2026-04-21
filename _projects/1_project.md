@@ -1,81 +1,34 @@
 ---
 layout: page
-title: project 1
-description: with background image
-img: assets/img/12.jpg
+title: Hydrogen Refueling Infrastructure Optimization
+description: Siting green and blue hydrogen refueling stations along freight corridors using MILP optimization
+img: assets/img/1.jpg
 importance: 1
-category: work
+category: research
 related_publications: true
 ---
 
-Every project has a beautiful feature showcase page.
-It's easy to include images in a flexible 3-column grid format.
-Make your photos 1/3, 2/3, or full width.
+## Overview
 
-To give your project a background in the portfolio page, just add the img tag to the front matter like so:
+This project develops a **Mixed Integer Linear Programming (MILP)** optimization framework for the strategic siting of hydrogen refueling stations (HRS) along major freight corridors. The framework simultaneously accounts for **green hydrogen** (electrolysis from renewables) and **blue hydrogen** (natural gas + carbon capture) supply chains to minimize total infrastructure cost while ensuring adequate coverage for heavy-duty freight vehicles.
 
-    ---
-    layout: page
-    title: project
-    description: a project with a background image
-    img: /assets/img/12.jpg
-    ---
+## Motivation
 
-<div class="row">
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/1.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/3.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/5.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-</div>
-<div class="caption">
-    Caption photos easily. On the left, a road goes through a tunnel. Middle, leaves artistically fall in a hipster photoshoot. Right, in another hipster photoshoot, a lumberjack grasps a handful of pine needles.
-</div>
-<div class="row">
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/5.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-</div>
-<div class="caption">
-    This image can also have a caption. It's like magic.
-</div>
+Heavy-duty freight trucks contribute disproportionately to transportation greenhouse gas emissions. Hydrogen fuel cell trucks offer a zero-tailpipe-emission alternative, but deployment depends critically on refueling infrastructure availability. Without strategically placed stations, the chicken-and-egg problem prevents adoption. This work provides a decision-support tool for infrastructure planners and policymakers to cost-effectively deploy HRS networks along freight corridors.
 
-You can also put regular text between your rows of images, even citations {% cite einstein1950meaning %}.
-Say you wanted to write a bit about your project before you posted the rest of the images.
-You describe how you toiled, sweated, _bled_ for your project, and then... you reveal its glory in the next row of images.
+## Methods
 
-<div class="row justify-content-sm-center">
-    <div class="col-sm-8 mt-3 mt-md-0">
-        {% include figure.liquid path="assets/img/6.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-sm-4 mt-3 mt-md-0">
-        {% include figure.liquid path="assets/img/11.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-</div>
-<div class="caption">
-    You can also have artistically styled 2/3 + 1/3 images, like these.
-</div>
+- **MILP formulation** solved with **Gurobi** for station location-allocation decisions
+- **Dual supply chain modeling:** green (electrolysis) and blue (SMR + CCS) hydrogen with distinct cost structures and emissions profiles
+- **Freight flow demand:** origin-destination freight data used to estimate hydrogen demand at corridor candidate sites
+- **Coverage constraints:** station spacing ensures compatibility with fuel cell truck operating ranges
 
-The code is simple.
-Just wrap your images with `<div class="col-sm">` and place them inside `<div class="row">` (read more about the <a href="https://getbootstrap.com/docs/4.4/layout/grid/">Bootstrap Grid</a> system).
-To make images responsive, add `img-fluid` class to each; for rounded corners and shadows use `rounded` and `z-depth-1` classes.
-Here's the code for the last row of images above:
+## Key Results
 
-{% raw %}
+- Integrated production-and-siting co-optimization substantially reduces costs compared to sequential planning
+- Blue hydrogen provides near-term cost competitiveness; green hydrogen becomes dominant as renewable energy costs decline
+- The model identifies station clusters at high-demand corridor nodes that maximize fleet coverage per dollar invested
 
-```html
-<div class="row justify-content-sm-center">
-  <div class="col-sm-8 mt-3 mt-md-0">
-    {% include figure.liquid path="assets/img/6.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-  </div>
-  <div class="col-sm-4 mt-3 mt-md-0">
-    {% include figure.liquid path="assets/img/11.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-  </div>
-</div>
-```
+## Publication
 
-{% endraw %}
+{% cite park2026hydrogen %}
