@@ -1,6 +1,6 @@
 ---
 layout: page
-title: projects
+title: Projects
 permalink: /projects/
 description: My research projects spanning transportation optimization, machine learning, and sustainable mobility.
 nav: true
