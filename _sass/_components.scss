@@ -125,47 +125,6 @@ ul.task-list input[type="checkbox"] {
   }
 }
 
-// About page polish
-
-.about-page {
-  .post-title {
-    .last-name {
-      color: var(--global-theme-color);
-      font-weight: 400;
-    }
-  }
-
-  .post-header .desc {
-    position: relative;
-    padding-left: 0.85rem;
-    border-left: 3px solid var(--global-theme-color);
-    color: var(--global-text-color-light);
-    margin-bottom: 1.75rem;
-  }
-
-  .section-heading {
-    position: relative;
-    margin-top: 2.5rem;
-    padding-bottom: 0.4rem;
-    border-bottom: 1px solid var(--global-divider-color);
-
-    a {
-      text-decoration: none;
-    }
-
-    &::after {
-      content: "";
-      position: absolute;
-      left: 0;
-      bottom: -1px;
-      width: 56px;
-      height: 2px;
-      background: var(--global-theme-color);
-      border-radius: 2px;
-    }
-  }
-}
-
 // Research-interest pills
 
 .interest-tags {
