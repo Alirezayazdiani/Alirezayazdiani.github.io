@@ -125,6 +125,65 @@ ul.task-list input[type="checkbox"] {
   }
 }
 
+// News list (with expand/collapse)
+
+.news {
+  .news-collapsed .news-extra {
+    display: none;
+  }
+
+  .news-toggle {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    margin-top: 0.5rem;
+    padding: 0.35rem 0.85rem;
+    background: transparent;
+    border: 1px solid var(--global-divider-color);
+    border-radius: 999px;
+    color: var(--global-text-color-light);
+    font-size: 0.8rem;
+    line-height: 1.2;
+    cursor: pointer;
+    transition:
+      color 0.2s ease,
+      border-color 0.2s ease,
+      background 0.2s ease;
+
+    &:hover,
+    &:focus-visible {
+      color: var(--global-theme-color);
+      border-color: var(--global-theme-color);
+      outline: none;
+    }
+
+    i {
+      font-size: 0.7rem;
+    }
+
+    .news-toggle-more,
+    .news-toggle-less {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+    }
+
+    .news-toggle-less {
+      display: none;
+    }
+
+    &[aria-expanded="true"] {
+      .news-toggle-more {
+        display: none;
+      }
+
+      .news-toggle-less {
+        display: inline-flex;
+      }
+    }
+  }
+}
+
 // Research-interest pills
 
 .interest-tags {
