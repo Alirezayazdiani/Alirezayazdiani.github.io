@@ -13,6 +13,10 @@
   crossorigin="anonymous"
 ></script>
 
+{% if page.news_timeline %}
+  <script defer src="{{ '/assets/js/news-timeline.js' | relative_url | bust_file_cache }}" type="text/javascript"></script>
+{% endif %}
+
 {% if site.enable_masonry %}
   <!-- Masonry & imagesLoaded -->
   <script

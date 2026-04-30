@@ -17,9 +17,9 @@ selected_papers: true # includes a list of papers marked as "selected={true}"
 social: true # includes social icons at the bottom of the page
 
 announcements:
-  enabled: true # includes a list of news items
-  scrollable: false # disabled in favor of expand/collapse
-  limit: 6 # number of news items shown before the "Show more" toggle
+  enabled: true # news list below (with timeline ribbon on homepage)
+
+news_timeline: true # load assets/js/news-timeline.js on this page only
 
 latest_posts:
   enabled: false

@@ -1,17 +1,49 @@
-<div class="news">
+<div class="news {% if include.timeline %}news-with-timeline{% endif %}">
   {% if site.news != blank %}
     {% assign news_size = site.news | size %}
     {% assign news = site.news | reverse %}
 
-    {% if include.limit and page.announcements.limit %}
+    {% if include.timeline %}
+      {% assign news_limit = news_size %}
+    {% elsif include.limit and page.announcements.limit %}
       {% assign news_limit = page.announcements.limit %}
     {% else %}
       {% assign news_limit = news_size %}
     {% endif %}
 
     {% assign expandable = false %}
-    {% if include.limit and news_size > news_limit %}
-      {% assign expandable = true %}
+    {% unless include.timeline %}
+      {% if include.limit and news_size > news_limit %}
+        {% assign expandable = true %}
+      {% endif %}
+    {% endunless %}
+
+    {% if include.timeline %}
+      <div class="news-timeline-widget mb-3" data-news-timeline-widget>
+        <p class="news-timeline-hint text-muted small mb-2" id="news-timeline-help">
+          Drag the shaded band on the ribbon to slide the window in time; drag either end handle to widen or narrow; click gray areas to extend toward
+          that date.
+          <button type="button" class="news-timeline-reset btn btn-sm btn-link p-0 align-baseline ml-1">Reset to all dates</button>
+        </p>
+        <div class="news-timeline-status small font-weight-normal mb-1" aria-live="polite"></div>
+        <div class="news-timeline-track" role="group" aria-labelledby="news-timeline-help">
+          <div class="news-timeline-rail"></div>
+          <div
+            class="news-timeline-brush"
+            tabindex="0"
+            aria-label="Slide or resize the shaded region to filter news by date."
+          >
+            <button
+              type="button"
+              class="news-timeline-handle news-timeline-handle-l"
+              tabindex="-1"
+              aria-label="Drag to change earliest date"
+            ></button>
+            <div class="news-timeline-pan"></div>
+            <button type="button" class="news-timeline-handle news-timeline-handle-r" tabindex="-1" aria-label="Drag to change latest date"></button>
+          </div>
+        </div>
+      </div>
     {% endif %}
 
     <div
@@ -22,22 +54,30 @@
       {% endif %}
     >
       <table class="table table-sm table-borderless">
-        {% for item in news %}
-          <tr
-            {% if expandable and forloop.index > news_limit %}
-              class="news-extra"
-            {% endif %}
-          >
-            <th scope="row" style="width: 20%">{{ item.date | date: '%b %d, %Y' }}</th>
-            <td>
-              {% if item.inline %}
-                {{ item.content | remove: '<p>' | remove: '</p>' | emojify }}
-              {% else %}
-                <a class="news-title" href="{{ item.url | relative_url }}">{{ item.title }}</a>
+        <tbody>
+          {% for item in news %}
+            <tr
+              class="news-row {% if expandable and forloop.index > news_limit %}news-extra{% endif %}"
+              {% if include.timeline %}
+                data-news-date="{{ item.date | date: '%Y-%m-%d' }}"
               {% endif %}
-            </td>
-          </tr>
-        {% endfor %}
+            >
+              <th scope="row" style="width: 20%">{{ item.date | date: '%b %d, %Y' }}</th>
+              <td>
+                {% if item.inline %}
+                  {{ item.content | remove: '<p>' | remove: '</p>' | emojify }}
+                {% else %}
+                  <a class="news-title" href="{{ item.url | relative_url }}">{{ item.title }}</a>
+                {% endif %}
+              </td>
+            </tr>
+          {% endfor %}
+          {% if include.timeline %}
+            <tr class="news-timeline-empty-state" hidden>
+              <td colspan="2" class="text-muted small py-2 fst-italic">No news in this window.</td>
+            </tr>
+          {% endif %}
+        </tbody>
       </table>
     </div>
 
