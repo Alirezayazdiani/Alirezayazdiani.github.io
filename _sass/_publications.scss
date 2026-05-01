@@ -46,6 +46,22 @@
       .abbr {
         margin-bottom: 0.5rem;
 
+        img.preview.pub-journal-cover {
+          display: block;
+          max-width: 140px;
+          max-height: 200px;
+          width: 100%;
+          height: auto;
+          margin-left: auto;
+          margin-right: auto;
+          object-fit: contain;
+        }
+
+        figure img.pub-journal-cover {
+          max-height: 200px;
+          object-fit: contain;
+        }
+
         abbr {
           display: inline-block;
           background-color: var(--global-theme-color);
