@@ -2,7 +2,7 @@
 layout: page
 title: Railway Operations Optimization Under Disruptions
 description: Integer programming model for train rescheduling in disrupted urban and interurban rail networks, achieving 88% reduction in computational time
-img: assets/img/4.jpg
+img: assets/img/projects/cover-railway.png
 importance: 4
 category: research
 related_publications: true

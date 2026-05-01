@@ -2,7 +2,7 @@
 layout: page
 title: Time-Dependent EV Routing for Shared Mobility
 description: Optimization framework for electric vehicle routing with time-varying travel times and shared mobility integration
-img: assets/img/2.jpg
+img: assets/img/projects/cover-ev-routing.png
 importance: 2
 category: research
 related_publications: true

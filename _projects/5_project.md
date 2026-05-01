@@ -2,7 +2,7 @@
 layout: page
 title: AI-Driven Urban Air Mobility with Modular Aerial Pods
 description: MINLP optimization model for dynamic scheduling of modular aerial pod fleets using AI-driven demand forecasting
-img: assets/img/5.jpg
+img: assets/img/projects/cover-air-mobility.png
 importance: 5
 category: research
 related_publications: true

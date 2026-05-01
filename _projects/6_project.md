@@ -2,7 +2,7 @@
 layout: page
 title: UTECH-NYC — Urban Transportation, Environment, and Community Health
 description: Integrated modeling platform quantifying traffic-related PM2.5 emissions, air quality, and exposure risks across New York City under congestion pricing and electrification scenarios
-img: assets/img/6.jpg
+img: assets/img/projects/cover-utech-nyc.png
 importance: 6
 category: research
 related_publications: true

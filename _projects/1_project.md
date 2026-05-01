@@ -2,7 +2,7 @@
 layout: page
 title: Hydrogen Refueling Infrastructure Optimization
 description: Siting green and blue hydrogen refueling stations along freight corridors using MILP optimization
-img: assets/img/hrs_ga.jpg
+img: assets/img/projects/cover-hydrogen-hrs.png
 importance: 1
 category: research
 related_publications: true
@@ -14,11 +14,11 @@ This project develops a **Mixed Integer Linear Programming (MILP)** optimization
 
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/hrs_ga.jpg" title="Graphical abstract — hydrogen refueling corridor optimization" class="img-fluid rounded z-depth-1" %}
+        {% include figure.liquid loading="eager" path="assets/img/projects/cover-hydrogen-hrs.png" title="Project cover — hydrogen refueling corridor optimization" class="img-fluid rounded z-depth-1" %}
     </div>
 </div>
 <div class="caption">
-    Graphical abstract: integrated optimization of hydrogen refueling stations with green and blue hydrogen production for freight corridors.
+    Project cover art; the publication’s graphical abstracts and framework figures from the paper appear below.
 </div>
 
 ## Motivation
