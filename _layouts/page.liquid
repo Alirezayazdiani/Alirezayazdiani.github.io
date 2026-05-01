@@ -9,10 +9,16 @@ layout: default
 {% endif %}
 
 <div class="post">
-  <header class="post-header">
-    <h1 class="post-title">{{ page.title }}</h1>
-    <p class="post-description">{{ page.description }}</p>
-  </header>
+  {% comment %}Project covers include the title visually; skip duplicate visible header.{% endcomment %}
+  {% if page.collection == 'projects' %}
+    <h1 class="sr-only">{{ page.title }}</h1>
+  {% endif %}
+  {% unless page.collection == 'projects' %}
+    <header class="post-header">
+      <h1 class="post-title">{{ page.title }}</h1>
+      <p class="post-description">{{ page.description }}</p>
+    </header>
+  {% endunless %}
 
   <article>
     {{ content }}
