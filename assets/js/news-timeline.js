@@ -1,10 +1,10 @@
-'use strict';
+"use strict";
 (function () {
   /** Active drag session shared across widgets (single window listeners). */
   var timelineDrag = null;
 
   function parseYmd(s) {
-    var parts = String(s).split('-');
+    var parts = String(s).split("-");
     return new Date(Number(parts[0]), Number(parts[1]) - 1, Number(parts[2]));
   }
 
@@ -13,16 +13,16 @@
   }
 
   function formatRange(d0, d1) {
-    var o = { year: 'numeric', month: 'short', day: 'numeric' };
-    return d0.toLocaleDateString(undefined, o) + ' – ' + d1.toLocaleDateString(undefined, o);
+    var o = { year: "numeric", month: "short", day: "numeric" };
+    return d0.toLocaleDateString(undefined, o) + " – " + d1.toLocaleDateString(undefined, o);
   }
 
   /** Local calendar YYYY-MM-DD for inclusive comparisons */
   function toYmdLocal(d) {
     var y = d.getFullYear();
-    var m = String(d.getMonth() + 1).padStart(2, '0');
-    var day = String(d.getDate()).padStart(2, '0');
-    return y + '-' + m + '-' + day;
+    var m = String(d.getMonth() + 1).padStart(2, "0");
+    var day = String(d.getDate()).padStart(2, "0");
+    return y + "-" + m + "-" + day;
   }
 
   function startOfDayLocal(d) {
@@ -37,11 +37,11 @@
     var pct = pctFromClientX(ctx.track, ev.clientX);
     var mw = minWidthPct(ctx.span);
 
-    if (timelineDrag.type === 'left') {
+    if (timelineDrag.type === "left") {
       setRangeFromPct(ctx, clamp(pct, 0, ctx.endPct - mw), ctx.endPct);
-    } else if (timelineDrag.type === 'right') {
+    } else if (timelineDrag.type === "right") {
       setRangeFromPct(ctx, ctx.startPct, clamp(pct, ctx.startPct + mw, 100));
-    } else if (timelineDrag.type === 'pan') {
+    } else if (timelineDrag.type === "pan") {
       var delta = pct - timelineDrag.originPct;
       var ns = timelineDrag.s0 + delta;
       var ne = timelineDrag.e0 + delta;
@@ -71,7 +71,7 @@
       /* ignore */
     }
     timelineDrag = null;
-    document.body.classList.remove('news-timeline-dragging');
+    document.body.classList.remove("news-timeline-dragging");
   }
 
   function pctFromClientX(track, clientX) {
@@ -102,8 +102,8 @@
       statusEl = ctx.statusEl,
       list = ctx.list,
       rows = ctx.rows;
-    brush.style.left = ctx.startPct + '%';
-    brush.style.width = ctx.endPct - ctx.startPct + '%';
+    brush.style.left = ctx.startPct + "%";
+    brush.style.width = ctx.endPct - ctx.startPct + "%";
 
     var d0 = new Date(timeAtPct(ctx, ctx.startPct));
     var d1 = new Date(timeAtPct(ctx, ctx.endPct));
@@ -114,37 +114,51 @@
 
     var any = false;
     rows.forEach(function (tr) {
-      var ymd = tr.getAttribute('data-news-date');
+      var ymd = tr.getAttribute("data-news-date");
       var show = ymd >= ymdMin && ymd <= ymdMax;
-      tr.style.display = show ? '' : 'none';
+      tr.style.display = show ? "" : "none";
       if (show) any = true;
     });
 
-    var empty = list.querySelector('.news-timeline-empty-state');
+    var empty = list.querySelector(".news-timeline-empty-state");
     if (empty) empty.hidden = any;
   }
 
   function initWidget(widget) {
-    var track = widget.querySelector('.news-timeline-track');
-    var brush = widget.querySelector('.news-timeline-brush');
-    var statusEl = widget.querySelector('.news-timeline-status');
-    var resetBtn = widget.querySelector('.news-timeline-reset');
-    var list = widget.closest('.news')?.querySelector('#news-list') || document.getElementById('news-list');
+    var track = widget.querySelector(".news-timeline-track");
+    var brush = widget.querySelector(".news-timeline-brush");
+    var statusEl = widget.querySelector(".news-timeline-status");
+    var resetBtn = widget.querySelector(".news-timeline-reset");
+    var list = widget.closest(".news")?.querySelector("#news-list") || document.getElementById("news-list");
 
     if (!track || !brush || !list) return;
 
-    var rows = Array.prototype.slice.call(list.querySelectorAll('tr[data-news-date]'));
+    var rows = Array.prototype.slice.call(list.querySelectorAll("tr[data-news-date]"));
     if (rows.length === 0) {
       widget.hidden = true;
       return;
     }
 
     var dates = rows.map(function (r) {
-      return parseYmd(r.getAttribute('data-news-date')).getTime();
+      return parseYmd(r.getAttribute("data-news-date")).getTime();
     });
     var minT = Math.min.apply(null, dates);
     var maxT = Math.max.apply(null, dates);
     var span = Math.max(maxT - minT, 86400000);
+
+    var monthsAttr = widget.getAttribute("data-news-initial-months");
+    var initialMonths = monthsAttr != null ? parseInt(monthsAttr, 10) : 6;
+    if (!Number.isFinite(initialMonths) || initialMonths <= 0) initialMonths = 6;
+    /** Average month length (Gregorian year / 12) for a rolling window */
+    var msPerMonth = (365.25 / 12) * 86400000;
+    var windowStartT = Math.max(minT, maxT - initialMonths * msPerMonth);
+    var startPct = span > 0 ? ((windowStartT - minT) / span) * 100 : 0;
+    var endPct = 100;
+    var mw = minWidthPct(span);
+    if (endPct - startPct < mw) {
+      startPct = clamp(endPct - mw, 0, 100 - mw);
+      endPct = Math.min(100, startPct + mw);
+    }
 
     var ctx = {
       widget: widget,
@@ -155,52 +169,48 @@
       rows: rows,
       minT: minT,
       span: span,
-      startPct: 0,
-      endPct: 100,
+      startPct: startPct,
+      endPct: endPct,
     };
 
     brush.addEventListener(
-      'keydown',
+      "keydown",
       function (ev) {
         var step = 2;
-        if (ev.key === 'ArrowLeft' || ev.key === 'ArrowDown') {
+        if (ev.key === "ArrowLeft" || ev.key === "ArrowDown") {
           setRangeFromPct(ctx, ctx.startPct - step, ctx.endPct - step);
           ev.preventDefault();
-        } else if (ev.key === 'ArrowRight' || ev.key === 'ArrowUp') {
+        } else if (ev.key === "ArrowRight" || ev.key === "ArrowUp") {
           setRangeFromPct(ctx, ctx.startPct + step, ctx.endPct + step);
           ev.preventDefault();
         }
       },
-      true,
+      true
     );
 
     function beginDrag(kind, pointerId, el, extra) {
       timelineDrag = { type: kind, pointerId: pointerId, el: el, ctx: ctx };
       if (extra) Object.assign(timelineDrag, extra);
-      document.body.classList.add('news-timeline-dragging');
+      document.body.classList.add("news-timeline-dragging");
     }
 
-    widget
-      .querySelector('.news-timeline-handle-l')
-      .addEventListener('pointerdown', function (ev) {
-        ev.preventDefault();
-        ev.stopPropagation();
-        beginDrag('left', ev.pointerId, ev.target);
-        ev.target.setPointerCapture(ev.pointerId);
-      });
-
-    widget
-      .querySelector('.news-timeline-handle-r')
-      .addEventListener('pointerdown', function (ev) {
-        ev.preventDefault();
-        ev.stopPropagation();
-        beginDrag('right', ev.pointerId, ev.target);
-        ev.target.setPointerCapture(ev.pointerId);
-      });
-
-    widget.querySelector('.news-timeline-pan').addEventListener('pointerdown', function (ev) {
+    widget.querySelector(".news-timeline-handle-l").addEventListener("pointerdown", function (ev) {
       ev.preventDefault();
-      beginDrag('pan', ev.pointerId, ev.currentTarget, {
+      ev.stopPropagation();
+      beginDrag("left", ev.pointerId, ev.target);
+      ev.target.setPointerCapture(ev.pointerId);
+    });
+
+    widget.querySelector(".news-timeline-handle-r").addEventListener("pointerdown", function (ev) {
+      ev.preventDefault();
+      ev.stopPropagation();
+      beginDrag("right", ev.pointerId, ev.target);
+      ev.target.setPointerCapture(ev.pointerId);
+    });
+
+    widget.querySelector(".news-timeline-pan").addEventListener("pointerdown", function (ev) {
+      ev.preventDefault();
+      beginDrag("pan", ev.pointerId, ev.currentTarget, {
         originPct: pctFromClientX(track, ev.clientX),
         s0: ctx.startPct,
         e0: ctx.endPct,
@@ -209,16 +219,16 @@
     });
 
     if (resetBtn) {
-      resetBtn.addEventListener('click', function () {
+      resetBtn.addEventListener("click", function () {
         ctx.startPct = 0;
         ctx.endPct = 100;
         applyBrush(ctx);
       });
     }
 
-    var rail = track.querySelector('.news-timeline-rail');
+    var rail = track.querySelector(".news-timeline-rail");
     if (rail) {
-      rail.addEventListener('pointerdown', function (ev) {
+      rail.addEventListener("pointerdown", function (ev) {
         ev.preventDefault();
         var pct = pctFromClientX(track, ev.clientX);
         var mid = (ctx.startPct + ctx.endPct) / 2;
@@ -234,16 +244,16 @@
     applyBrush(ctx);
   }
 
-  window.addEventListener('pointermove', onTimelinePointerMove, { passive: false });
-  window.addEventListener('pointerup', onTimelinePointerEnd);
-  window.addEventListener('pointercancel', onTimelinePointerEnd);
+  window.addEventListener("pointermove", onTimelinePointerMove, { passive: false });
+  window.addEventListener("pointerup", onTimelinePointerEnd);
+  window.addEventListener("pointercancel", onTimelinePointerEnd);
 
   function init() {
-    document.querySelectorAll('[data-news-timeline-widget]').forEach(initWidget);
+    document.querySelectorAll("[data-news-timeline-widget]").forEach(initWidget);
   }
 
-  if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', init);
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", init);
   } else {
     init();
   }

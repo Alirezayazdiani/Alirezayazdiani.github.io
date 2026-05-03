@@ -19,11 +19,16 @@
     {% endunless %}
 
     {% if include.timeline %}
-      <div class="news-timeline-widget mb-3" data-news-timeline-widget>
+      {% assign timeline_months = include.initial_timeline_months | default: 6 %}
+      <div
+        class="news-timeline-widget mb-3"
+        data-news-timeline-widget
+        data-news-initial-months="{{ timeline_months }}"
+      >
         <p class="news-timeline-hint text-muted small mb-2" id="news-timeline-help">
-          Drag the shaded band on the ribbon to slide the window in time; drag either end handle to widen or narrow; click gray areas to extend toward
-          that date.
-          <button type="button" class="news-timeline-reset btn btn-sm btn-link p-0 align-baseline ml-1">Reset to all dates</button>
+          By default the list shows about the last {{ timeline_months }} months—drag the shaded band to slide or resize the window, or click the gray
+          rail to extend toward that date.
+          <button type="button" class="news-timeline-reset btn btn-sm btn-link p-0 align-baseline ml-1">Show all dates</button>
         </p>
         <div class="news-timeline-status small font-weight-normal mb-1" aria-live="polite"></div>
         <div class="news-timeline-track" role="group" aria-labelledby="news-timeline-help">

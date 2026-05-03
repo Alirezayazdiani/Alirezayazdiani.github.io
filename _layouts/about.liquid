@@ -45,7 +45,7 @@ layout: default
       <h2>
         <a href="{{ '/news/' | relative_url }}" style="color: inherit">news</a>
       </h2>
-      {% include news.liquid timeline=true %}
+      {% include news.liquid timeline=true initial_timeline_months=page.announcements.initial_timeline_months %}
     {% endif %}
 
     <!-- Latest posts -->

@@ -18,6 +18,7 @@ social: true # includes social icons at the bottom of the page
 
 announcements:
   enabled: true # news list below (with timeline ribbon on homepage)
+  initial_timeline_months: 6 # default date window; use "Show all dates" or widen the band for older items
 
 news_timeline: true # load assets/js/news-timeline.js on this page only
 
