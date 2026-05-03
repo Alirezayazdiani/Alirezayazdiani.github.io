@@ -27,11 +27,45 @@ table {
   td,
   th {
     font-size: 1rem;
-    padding: 1px 1rem 1px 0;
+    padding: 0.55rem 1rem 0.55rem 0;
   }
 
   th {
-    font-weight: bold;
+    font-weight: 600;
+    color: var(--global-text-color-light);
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+    font-size: 0.85rem;
+    border-bottom: 2px solid var(--global-divider-color);
+  }
+}
+
+#markdown-content table,
+.post-content table:not(.cv) {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  margin: 1.5rem 0;
+  border-radius: 10px;
+  overflow: hidden;
+  border: 1px solid var(--global-divider-color);
+
+  th,
+  td {
+    padding: 0.65rem 1rem;
+    border-bottom: 1px solid var(--global-divider-color);
+  }
+
+  thead th {
+    background: var(--global-surface-color-soft);
+  }
+
+  tbody tr:last-child td {
+    border-bottom: none;
+  }
+
+  tbody tr:hover {
+    background: var(--global-surface-color-soft);
   }
 }
 
@@ -57,11 +91,32 @@ table.table a {
 }
 
 blockquote {
-  background: var(--global-bg-color);
-  border-left: 5px solid var(--global-theme-color);
-  margin: 1.5em 0;
-  padding: 1em;
-  font-size: 1.2rem;
+  position: relative;
+  background: var(--global-surface-color-soft);
+  border: 1px solid var(--global-divider-color);
+  border-left: 4px solid var(--global-theme-color);
+  border-radius: 10px;
+  margin: 1.75em 0;
+  padding: 1em 1.25em 1em 1.25em;
+  font-size: 1.08rem;
+  line-height: 1.65;
+  font-style: italic;
+  color: var(--global-text-color);
+  box-shadow: var(--global-card-shadow);
+
+  &::before {
+    content: "“";
+    position: absolute;
+    top: -0.4rem;
+    left: 0.6rem;
+    font-family: Georgia, "Times New Roman", serif;
+    font-style: normal;
+    font-size: 3rem;
+    line-height: 1;
+    color: var(--global-theme-color);
+    opacity: 0.35;
+    pointer-events: none;
+  }
 
   p {
     margin-bottom: 0;

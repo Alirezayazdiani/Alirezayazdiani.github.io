@@ -14,34 +14,94 @@ body {
     "calt" 1;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  position: relative;
+  isolation: isolate;
 
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6 {
-    scroll-margin-top: 66px;
-    letter-spacing: -0.005em;
+  // Ambient atmosphere: two soft gradient blobs that follow the theme,
+  // pinned to the viewport. Pure CSS, GPU-friendly, decorative only.
+  &::before,
+  &::after {
+    content: "";
+    position: fixed;
+    z-index: -1;
+    pointer-events: none;
+    border-radius: 50%;
+    filter: blur(80px);
+    opacity: 0.55;
+    animation: ambient-drift 30s ease-in-out infinite alternate;
   }
 
-  // Selection color: subtle theme-tinted highlight
-  ::selection {
-    background: var(--global-theme-color-soft);
-    color: var(--global-text-color);
+  &::before {
+    width: 60vmax;
+    height: 60vmax;
+    top: -20vmax;
+    right: -15vmax;
+    background: radial-gradient(circle at 30% 30%, color-mix(in srgb, var(--global-theme-color) 35%, transparent), transparent 60%);
   }
 
-  // Consistent focus ring for keyboard navigation
-  a:focus-visible,
-  button:focus-visible,
-  [role="button"]:focus-visible,
-  input:focus-visible,
-  textarea:focus-visible,
-  select:focus-visible {
-    outline: none;
-    box-shadow: var(--global-focus-ring);
-    border-radius: 4px;
+  &::after {
+    width: 55vmax;
+    height: 55vmax;
+    bottom: -18vmax;
+    left: -15vmax;
+    background: radial-gradient(circle at 70% 70%, color-mix(in srgb, var(--global-accent-color) 30%, transparent), transparent 60%);
+    animation-direction: alternate-reverse;
+    animation-duration: 38s;
   }
+
+  @media (prefers-reduced-motion: reduce) {
+    &::before,
+    &::after {
+      animation: none;
+    }
+  }
+}
+
+html[data-theme="dark"] body::before,
+html[data-theme="dark"] body::after {
+  opacity: 0.35;
+}
+
+@keyframes ambient-drift {
+  0% {
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+
+  50% {
+    transform: translate3d(2vmax, 1vmax, 0) scale(1.05);
+  }
+
+  100% {
+    transform: translate3d(-1vmax, -2vmax, 0) scale(0.97);
+  }
+}
+
+body h1,
+body h2,
+body h3,
+body h4,
+body h5,
+body h6 {
+  scroll-margin-top: 66px;
+  letter-spacing: -0.005em;
+}
+
+// Selection color: subtle theme-tinted highlight
+::selection {
+  background: var(--global-theme-color-soft);
+  color: var(--global-text-color);
+}
+
+// Consistent focus ring for keyboard navigation
+body a:focus-visible,
+body button:focus-visible,
+body [role="button"]:focus-visible,
+body input:focus-visible,
+body textarea:focus-visible,
+body select:focus-visible {
+  outline: none;
+  box-shadow: var(--global-focus-ring);
+  border-radius: 4px;
 }
 
 body.fixed-top-nav {
@@ -62,6 +122,68 @@ body.sticky-bottom-footer {
 .profile {
   img {
     width: 100%;
+  }
+}
+
+// ----------------------------------------------------------------------------
+// First-paint stagger fade-in (used by the about page hero)
+// ----------------------------------------------------------------------------
+@keyframes hero-fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .about-page .post-header .post-title,
+  .about-page .post-header .desc,
+  .about-page .profile,
+  .about-page > article > .clearfix > p,
+  .about-page > article > .clearfix > .interest-tags,
+  .about-page > article > h2,
+  .about-page > article > .news,
+  .about-page > article > .publications,
+  .about-page > article > .social {
+    animation: hero-fade-up 0.7s cubic-bezier(0.2, 0.7, 0.2, 1) both;
+  }
+
+  .about-page .post-header .post-title {
+    animation-delay: 0ms;
+  }
+
+  .about-page .post-header .desc {
+    animation-delay: 90ms;
+  }
+
+  .about-page .profile {
+    animation-delay: 60ms;
+  }
+
+  .about-page > article > .clearfix > p {
+    animation-delay: 180ms;
+  }
+
+  .about-page > article > .clearfix > .interest-tags {
+    animation-delay: 240ms;
+  }
+
+  .about-page > article > h2 {
+    animation-delay: 280ms;
+  }
+
+  .about-page > article > .news,
+  .about-page > article > .publications {
+    animation-delay: 340ms;
+  }
+
+  .about-page > article > .social {
+    animation-delay: 400ms;
   }
 }
 
@@ -127,6 +249,48 @@ body.sticky-bottom-footer {
           border-bottom-style: solid;
           text-decoration: none;
         }
+      }
+    }
+  }
+
+  // Lead paragraph + drop cap on the about page intro
+  > article > .clearfix {
+    font-size: 1.02rem;
+    line-height: 1.7;
+
+    > p:first-of-type {
+      font-size: 1.06rem;
+
+      &::first-letter {
+        font-size: 3.2em;
+        font-weight: 700;
+        line-height: 0.95;
+        float: left;
+        margin: 0.05em 0.55rem 0 0;
+        background: var(--global-accent-gradient);
+        background-clip: text;
+        -webkit-background-clip: text;
+        color: transparent;
+        -webkit-text-fill-color: transparent;
+      }
+    }
+
+    a:not(.btn):not(.interest-tag) {
+      color: var(--global-theme-color);
+      text-decoration: none;
+      background-image: linear-gradient(currentColor, currentColor);
+      background-size: 0 1px;
+      background-repeat: no-repeat;
+      background-position: 0 100%;
+      padding-bottom: 1px;
+      transition:
+        background-size 0.3s ease,
+        color 0.2s ease;
+
+      &:hover,
+      &:focus-visible {
+        background-size: 100% 1px;
+        text-decoration: none;
       }
     }
   }
