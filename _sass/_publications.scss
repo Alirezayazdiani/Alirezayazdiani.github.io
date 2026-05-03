@@ -24,11 +24,26 @@
   }
 
   h2.bibliography {
-    color: var(--global-divider-color);
+    position: relative;
+    color: var(--global-text-color);
+    font-size: 1.05rem;
+    text-transform: uppercase;
+    letter-spacing: 0.14em;
     border-top: 1px solid var(--global-divider-color);
-    padding-top: 1rem;
-    margin-top: 2rem;
+    padding: 1.4rem 0 0.4rem;
+    margin: 2.5rem 0 1rem;
     text-align: right;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: -1px;
+      right: 0;
+      width: 3rem;
+      height: 2px;
+      background: var(--global-accent-gradient);
+      border-radius: 2px;
+    }
   }
 
   ol.bibliography {
@@ -37,7 +52,22 @@
     margin-top: 0;
 
     li {
-      margin-bottom: 1rem;
+      position: relative;
+      margin-bottom: 0.5rem;
+      padding: 1.1rem 1rem 1.1rem;
+      border-radius: 12px;
+      border: 1px solid transparent;
+      transition:
+        background-color 0.25s ease,
+        border-color 0.25s ease,
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
+
+      &:hover {
+        background-color: var(--global-surface-color-soft);
+        border-color: var(--global-divider-color);
+        box-shadow: var(--global-card-shadow);
+      }
 
       .preview {
         display: inline-block;
@@ -55,18 +85,32 @@
           margin-left: auto;
           margin-right: auto;
           object-fit: contain;
+          border-radius: 6px;
+          box-shadow:
+            0 2px 6px rgba(0, 0, 0, 0.08),
+            0 12px 28px rgba(0, 0, 0, 0.08);
+          transition:
+            transform 0.3s ease,
+            box-shadow 0.3s ease;
         }
 
         figure img.pub-journal-cover {
           max-height: 200px;
           object-fit: contain;
+          border-radius: 6px;
         }
 
         abbr {
           display: inline-block;
+          background: var(--global-accent-gradient);
           background-color: var(--global-theme-color);
-          margin-bottom: 0.5rem;
-          color: var(--global-card-bg-color) !important;
+          margin-bottom: 0.6rem;
+          padding: 0.25rem 0.6rem;
+          font-weight: 600;
+          letter-spacing: 0.04em;
+          color: #ffffff !important;
+          border-radius: 999px;
+          box-shadow: 0 1px 4px rgba(0, 0, 0, 0.08);
 
           a {
             color: white;
@@ -83,8 +127,24 @@
         }
       }
 
+      &:hover .abbr img.preview.pub-journal-cover {
+        transform: translateY(-2px);
+        box-shadow:
+          0 4px 10px rgba(0, 0, 0, 0.12),
+          0 16px 36px rgba(0, 0, 0, 0.14);
+      }
+
       .title {
-        font-weight: bolder;
+        font-weight: 700;
+        font-size: 1.02rem;
+        line-height: 1.35;
+        margin-bottom: 0.25rem;
+      }
+
+      .periodical {
+        color: var(--global-text-color-light);
+        font-size: 0.9rem;
+        line-height: 1.45;
       }
 
       .author {
@@ -115,22 +175,46 @@
       }
 
       .links {
+        margin-top: 0.5rem;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.4rem;
+
         a.btn {
           color: var(--global-text-color);
-          border: 1px solid var(--global-text-color);
-          padding-left: 1rem;
-          padding-right: 1rem;
-          padding-top: 0.25rem;
-          padding-bottom: 0.25rem;
-          margin-left: 0;
+          border: 1px solid var(--global-divider-color);
+          background: transparent;
+          padding: 0.2rem 0.85rem;
+          margin: 0;
+          border-radius: 999px;
+          font-size: 0.78rem;
+          font-weight: 500;
+          letter-spacing: 0.02em;
+          line-height: 1.35;
+          transition:
+            color 0.2s ease,
+            border-color 0.2s ease,
+            background 0.2s ease,
+            transform 0.15s ease;
 
           &:hover {
             color: var(--global-theme-color);
             border-color: var(--global-theme-color);
+            background: var(--global-theme-color-soft);
+            transform: translateY(-1px);
+            text-decoration: none;
           }
         }
+
         a.award.btn {
+          color: var(--global-highlight-color);
           border-color: var(--global-highlight-color);
+
+          &:hover {
+            color: var(--global-card-bg-color);
+            background: var(--global-highlight-color);
+            border-color: var(--global-highlight-color);
+          }
         }
       }
 

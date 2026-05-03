@@ -24,12 +24,42 @@ footer.fixed-bottom {
 }
 
 footer.sticky-bottom {
+  position: relative;
   border-top: 1px solid var(--global-divider-color);
-  padding-top: 40px;
-  padding-bottom: 40px;
-  font-size: 0.9rem;
+  padding-top: 2.75rem;
+  padding-bottom: 2.5rem;
+  font-size: 0.85rem;
+  color: var(--global-text-color-light);
+
+  // Subtle gradient accent rule above the footer
+  &::before {
+    content: "";
+    position: absolute;
+    top: -1px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 8rem;
+    height: 3px;
+    border-radius: 3px;
+    background: var(--global-accent-gradient);
+    opacity: 0.85;
+  }
 
   .container {
     text-align: center;
+  }
+
+  a {
+    color: var(--global-text-color);
+    border-bottom: 1px dashed var(--global-divider-color);
+    transition:
+      color 0.2s ease,
+      border-color 0.2s ease;
+
+    &:hover {
+      color: var(--global-theme-color);
+      border-bottom-color: var(--global-theme-color);
+      text-decoration: none;
+    }
   }
 }

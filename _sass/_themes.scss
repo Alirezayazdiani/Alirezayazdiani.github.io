@@ -11,14 +11,22 @@
   --global-text-color: #{v.$black-color};
   --global-text-color-light: #{v.$grey-color};
   --global-theme-color: #{v.$purple-color};
+  --global-theme-color-soft: #{rgba(v.$purple-color, 0.12)};
+  --global-accent-color: #{v.$pink-color};
+  --global-accent-gradient: linear-gradient(120deg, #{v.$purple-color} 0%, #{v.$pink-color} 55%, #{v.$orange-color} 100%);
   --global-hover-color: #{v.$purple-color};
   --global-hover-text-color: #{v.$white-color};
   --global-footer-bg-color: #{v.$grey-color-dark};
   --global-footer-text-color: #{v.$grey-color-light};
   --global-footer-link-color: #{v.$white-color};
   --global-distill-app-color: #{v.$grey-color};
-  --global-divider-color: rgba(0, 0, 0, 0.1);
+  --global-divider-color: rgba(0, 0, 0, 0.08);
+  --global-surface-color: #{color.adjust(v.$white-color, $lightness: -2%)};
+  --global-surface-color-soft: #{color.adjust(v.$white-color, $lightness: -1%)};
   --global-card-bg-color: #{v.$white-color};
+  --global-card-shadow: 0 1px 2px rgba(0, 0, 0, 0.04), 0 8px 24px rgba(0, 0, 0, 0.06);
+  --global-card-shadow-strong: 0 2px 4px rgba(0, 0, 0, 0.06), 0 18px 40px rgba(0, 0, 0, 0.1);
+  --global-focus-ring: 0 0 0 3px #{rgba(v.$purple-color, 0.25)};
   --global-highlight-color: #{v.$red-color-dark};
   --global-back-to-top-bg-color: rgba(
     #{color.channel(v.$black-color, "red", v.$space: rgb)},
@@ -81,14 +89,22 @@ html[data-theme="dark"] {
   --global-text-color: #{v.$grey-color-light};
   --global-text-color-light: #{v.$grey-color};
   --global-theme-color: #{v.$cyan-color};
+  --global-theme-color-soft: #{rgba(v.$cyan-color, 0.18)};
+  --global-accent-color: #{v.$green-color-bright};
+  --global-accent-gradient: linear-gradient(120deg, #{v.$cyan-color} 0%, #{v.$green-color-bright} 55%, #{v.$light-purple-color} 100%);
   --global-hover-color: #{v.$cyan-color};
   --global-hover-text-color: #{v.$white-color};
   --global-footer-bg-color: #{v.$grey-color-light};
   --global-footer-text-color: #{v.$grey-color-dark};
   --global-footer-link-color: #{v.$black-color};
   --global-distill-app-color: #{v.$grey-color-light};
-  --global-divider-color: #424246;
+  --global-divider-color: #3a3a40;
+  --global-surface-color: #{color.adjust(v.$grey-color-dark, $lightness: 4%)};
+  --global-surface-color-soft: #{color.adjust(v.$grey-color-dark, $lightness: 2%)};
   --global-card-bg-color: #{v.$grey-900};
+  --global-card-shadow: 0 1px 2px rgba(0, 0, 0, 0.4), 0 10px 30px rgba(0, 0, 0, 0.35);
+  --global-card-shadow-strong: 0 2px 4px rgba(0, 0, 0, 0.45), 0 18px 40px rgba(0, 0, 0, 0.5);
+  --global-focus-ring: 0 0 0 3px #{rgba(v.$cyan-color, 0.35)};
   --global-back-to-top-bg-color: rgba(
     #{color.channel(v.$white-color, "red", v.$space: rgb)},
     #{color.channel(v.$white-color, "green", v.$space: rgb)},

@@ -7,8 +7,25 @@
 .navbar {
   box-shadow: none;
   border-bottom: 1px solid var(--global-divider-color);
-  background-color: var(--global-bg-color);
-  opacity: 0.95;
+  background-color: color-mix(in srgb, var(--global-bg-color) 88%, transparent);
+  backdrop-filter: saturate(180%) blur(14px);
+  -webkit-backdrop-filter: saturate(180%) blur(14px);
+  transition:
+    background-color 0.25s ease,
+    border-color 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.navbar.scrolled {
+  border-bottom-color: transparent;
+  box-shadow: 0 2px 18px rgba(0, 0, 0, 0.08);
+}
+
+@supports not ((-webkit-backdrop-filter: blur(1px)) or (backdrop-filter: blur(1px))) {
+  .navbar {
+    background-color: var(--global-bg-color);
+    opacity: 0.97;
+  }
 }
 
 .navbar .dropdown-menu,
@@ -57,20 +74,50 @@
 
   .navbar-brand {
     color: var(--global-text-color);
+    letter-spacing: 0.01em;
+    transition: color 0.2s ease;
+
+    &:hover {
+      color: var(--global-theme-color);
+    }
   }
 
   .navbar-nav .nav-item .nav-link {
     color: var(--global-text-color);
+    position: relative;
+    transition: color 0.2s ease;
+
+    &::after {
+      content: "";
+      position: absolute;
+      left: 0.5rem;
+      right: 0.5rem;
+      bottom: 0.35rem;
+      height: 2px;
+      border-radius: 2px;
+      background: var(--global-accent-gradient);
+      transform: scaleX(0);
+      transform-origin: left center;
+      transition: transform 0.25s ease;
+    }
 
     &:hover {
       color: var(--global-hover-color);
+
+      &::after {
+        transform: scaleX(0.6);
+      }
     }
   }
 
   .navbar-nav .nav-item.active > .nav-link {
     background-color: inherit;
-    font-weight: bolder;
+    font-weight: 600;
     color: var(--global-theme-color);
+
+    &::after {
+      transform: scaleX(1);
+    }
 
     &:hover {
       color: var(--global-hover-color);
