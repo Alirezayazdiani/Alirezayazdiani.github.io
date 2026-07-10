@@ -1,27 +1,35 @@
 metadata:
-  last_updated: '2026-06-24'
+  last_updated: '2026-07-10'
 papers:
   yAJENG4AAAAJ:KlAtU1dfN6UC:
-    citations: 6
+    citations: 8
     title: Machine learning in spatiotemporal PM2. 5 hotspots analysis for better targeted mitigation strategies
     year: '2025'
   yAJENG4AAAAJ:LkGwnXOMwfcC:
     citations: 4
     title: A scheduling optimization model for dynamic electric autonomous ridesharing with nonlinear charging function
-    year: '2025'
+    year: '2024'
   yAJENG4AAAAJ:M3ejUd6NZC8C:
     citations: 2
     title: Integrated optimization of hydrogen refueling stations with green and blue hydrogen production for freight corridors
     year: '2026'
   yAJENG4AAAAJ:_FxGoFyzp5QC:
-    citations: 5
+    citations: 6
     title: 'An optimization framework for the time-dependent electric vehicle routing problem with shared mobility: a step toward smart cities'
     year: '2025'
+  yAJENG4AAAAJ:dhFuZR0502QC:
+    citations: 0
+    title: Stochastic Multi-Class Traffic Assignment for Autonomous and Regular Vehicles in a Transportation Network
+    year: '2022'
   yAJENG4AAAAJ:hqOjcs7Dif8C:
-    citations: 2
+    citations: 3
     title: Ai-driven adaptive air transit network with modular aerial pods
     year: '2025'
+  yAJENG4AAAAJ:mVmsd5A6BfQC:
+    citations: 0
+    title: Assessing Environmental Impacts of Road Freight Transportation in the US
+    year: '2026'
   yAJENG4AAAAJ:roLk4NBRz8UC:
-    citations: 18
+    citations: 17
     title: 'Digitalizing railway operations: An optimization-based train rescheduling model for urban and interurban disrupted networks'
     year: '2025'
