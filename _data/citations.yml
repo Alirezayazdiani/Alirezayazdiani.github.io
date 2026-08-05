@@ -1,5 +1,5 @@
 metadata:
-  last_updated: '2026-07-31'
+  last_updated: '2026-08-05'
 papers:
   yAJENG4AAAAJ:KlAtU1dfN6UC:
     citations: 9
@@ -14,12 +14,12 @@ papers:
     title: Integrated optimization of hydrogen refueling stations with green and blue hydrogen production for freight corridors
     year: '2026'
   yAJENG4AAAAJ:_FxGoFyzp5QC:
-    citations: 5
+    citations: 6
     title: 'An optimization framework for the time-dependent electric vehicle routing problem with shared mobility: a step toward smart cities'
     year: '2025'
   yAJENG4AAAAJ:dhFuZR0502QC:
     citations: 0
-    title: Stochastic Multi-class Traffic Assignment for Autonomous and Regular Vehicles in a Transportation Network
+    title: Stochastic Multi-Class Traffic Assignment for Autonomous and Regular Vehicles in a Transportation Network
     year: '2022'
   yAJENG4AAAAJ:hqOjcs7Dif8C:
     citations: 3
@@ -30,6 +30,6 @@ papers:
     title: Assessing Environmental Impacts of Road Freight Transportation in the US
     year: '2026'
   yAJENG4AAAAJ:roLk4NBRz8UC:
-    citations: 17
+    citations: 18
     title: 'Digitalizing railway operations: An optimization-based train rescheduling model for urban and interurban disrupted networks'
     year: '2025'
