@@ -34,4 +34,4 @@ Transportation is the largest source of greenhouse gas emissions in the United S
 
 ## Publication
 
-{% cite lu2025utech %}
+{% cite lu2026utech %}

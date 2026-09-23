@@ -128,6 +128,45 @@ cv:
         summary: Ranked 645th among more than 200,000 students.
 
     Publications:
+      - title: "Urban transportation, environment, and community health for New York City (UTECH-NYC)"
+        authors:
+          - D. Lu
+          - A. Yazdiani
+          - C. Avci
+          - C. Closs
+          - M. Tayarani
+          - H. O. Gao
+        publisher: Transportation Research Part D
+        releaseDate: 2026-12-01
+        url: https://doi.org/10.1016/j.trd.2026.105628
+
+      - title: "Assessing Environmental Impacts of Road Freight Transportation in the US"
+        authors:
+          - S. Bazarnovi
+          - A. Yazdiani
+          - A. Mohammadian
+        publisher: ASCE International Conference on Transportation and Development 2026
+        releaseDate: 2026-06-25
+        url: https://doi.org/10.1061/9780784487020.078
+
+      - title: "A Scheduling Optimization Model for Dynamic Electric Autonomous Ridesharing with Nonlinear Charging Function"
+        authors:
+          - A. Elmi
+          - A. Yazdiani
+          - Y. Shafahi
+        publisher: ASCE International Conference on Transportation and Development 2026
+        releaseDate: 2026-06-25
+        url: https://doi.org/10.1061/9780784487013.027
+
+      - title: "Stochastic Multi-Class Traffic Assignment for Autonomous and Regular Vehicles in a Transportation Network"
+        authors:
+          - S. R. Mousavi
+          - A. Yazdiani
+          - Y. Shafahi
+        publisher: ASCE International Conference on Transportation and Development 2026
+        releaseDate: 2026-06-25
+        url: https://doi.org/10.1061/9780784487013.028
+
       - title: "Integrated Optimization of Hydrogen Refueling Stations with Green and Blue Hydrogen Production for Freight Corridors"
         authors:
           - Y. G. Park
